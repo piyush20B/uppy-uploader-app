@@ -1,0 +1,25 @@
+# Logs
+uppy\logs
+uppy\*.log
+uppy\npm-debug.log*
+uppy\yarn-debug.log*
+uppy\yarn-error.log*
+uppy\pnpm-debug.log*
+uppy\lerna-debug.log*
+
+uppy\node_modules
+uppy\dist
+uppy\dist-ssr
+uppy\*.local
+
+# Editor directories and files
+venv\
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
