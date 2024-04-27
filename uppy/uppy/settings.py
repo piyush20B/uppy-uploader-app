@@ -37,6 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # my apps
+    'authuppy.apps.AuthuppyConfig'
+    'uppyApp.apps.UppyappConfig'
+    'uploads.apps.UploadsConfig'
+    'terms.apps.TermsConfig'
 ]
 
 MIDDLEWARE = [
