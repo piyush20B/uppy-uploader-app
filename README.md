@@ -1,8 +1,105 @@
-# React + Vite
+# Uppy Cloud
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<div style="display: flex; justify-content: center; align-items: center; height: 100px; width: 100%; margin: 20px auto;">
+  <img src="uppy/static/src/brand/uppy-main.png" alt="Uppy" style="max-height: 100px; max-width: 100px;">
+</div>
 
-Currently, two official plugins are available:
+Welcome to Uppy Cloud – Your Personal Cloud Storage Solution 🚀
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Table of Contents
+
+- [Uppy Cloud](#uppy-cloud)
+  - [Table of Contents](#table-of-contents)
+  - [Creator](#creator)
+  - [Introduction](#introduction)
+  - [Features](#features)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Contributing](#contributing)
+  - [Terms](#terms)
+
+
+## Creator
+
+**Name:** Piyush Rana  
+**Age:** 20  
+**Date Created:** 24-04-2024 
+
+I'm a passionate web developer with a keen interest in modern web technologies. With a dedication to learning and exploring new concepts in web development.
+
+---
+
+Feel free to customize this information as needed for your project! Let me know if there's anything else I can assist you with.
+
+## Introduction
+
+Uppy Cloud offers you a seamless file uploading and storage experience. Upload, save, and access your files anytime, anywhere.
+
+## Features
+
+- Effortlessly upload and save files.
+- Securely store your files in the cloud.
+- Intuitive user interface for seamless navigation.
+
+## Prerequisites
+
+Before you begin, ensure you have met the following requirements:
+- Python installed on your local machine
+- Django installed (`pip install django` : v4.2.9)  
+  
+
+## Installation
+
+To set up Uppy Cloud locally, follow these steps:
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/piyush20B/uppy-cloud.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd uppy
+   ```
+
+3. Install dependencies:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+## Usage
+
+Since Uppy Cloud is a Django project, you can run it locally using Django's built-in development server. Follow these steps:
+
+1. Navigate to the project directory if you're not already there:
+
+   ```bash
+   cd uppy
+   ```
+
+2. Run the development server:
+
+   ```bash
+   python manage.py runserver
+   ```
+
+3. Open your web browser and go to [http://localhost:8000](http://localhost:8000) to view the application.
+
+## Contributing
+
+Contributions to Uppy Cloud are highly encouraged! Your ideas, bug fixes, and feature enhancements are invaluable to the project's growth. Feel free to open an issue or submit a pull request to make Uppy Cloud even better!
+
+## Terms
+
+By using Uppy Cloud, you agree to the following terms:
+
+1. **Open Source**: Uppy Cloud is an open-source project. You are welcome to use, modify, and distribute the source code.
+  
+2. **Non-Commercial Use**: While Uppy Cloud is currently not intended for commercial purposes, your support and contributions are immensely appreciated. Let's make cloud storage accessible to everyone! 🌟
+```
+
+This version is tailored to reflect that it's a Django project and provides instructions specific to Django's setup and usage. Let me know if you need further adjustments!
