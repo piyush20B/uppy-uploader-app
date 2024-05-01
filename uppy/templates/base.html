@@ -1,34 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Uppy | {% block title %}{% endblock title %} </title>
     <link rel="shortcut icon" href="/static/src/brand/uppy-main.png" type="image/x-icon">
-    <link rel="stylesheet" href="/static/src/scss/main.css">
+    <link rel="stylesheet" href="/static/src/scss/uppy.main.css">
 </head>
+
 <body>
 
     <header>
         <div class="wrapper">
-            <div class="logo">
-                <div class="brand-logo">
-                    <img src="/static" alt="">
+            <a href="/">
+                <div class="logo">
+                    <div class="brand-logo">
+                        <img src="/static/src/brand/uppy-main.png" alt="Uppy">
+                    </div>
+                    <div class="brand-name">
+                        Uppy
+                    </div>
                 </div>
-                <div class="brand-name">
-                    Uppy
-                </div>
-            </div>
+            </a>
             <div class="searchBarWrapper">
                 <div class="searchBar-input">
-                    <input type="text" placeholder="Search Your Files!!">
+                    <input id="search-content" name="search-content" type="text" placeholder="Search Your Files!!">
                 </div>
                 <span class="shortcut">
-                    <code>
-                        <div class="key">ctrl</div>
-                        <span>+</span>
-                        <div class="key">/</div>
-                    </code>
+                    <div class="key">ctrl</div>
+                    <span>+</span>
+                    <div class="key">/</div>
                 </span>
                 <div class="search-btn">
                     <button type="submit">Search</button>
@@ -45,6 +47,17 @@
     </header>
     <main></main>
     <footer></footer>
-    
+
+
+    <!-- Scripts and libraries -->
+    <!-- <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script> -->
+    <!-- tooltips -->
+    <!-- <script src="https://unpkg.com/popper.js@1"></script>
+    <script src="https://unpkg.com/tippy.js@5/dist/tippy-bundle.iife.js"></script> -->
+
+    {% block customScripts %}{% endblock customScripts %}
+
 </body>
+
 </html>

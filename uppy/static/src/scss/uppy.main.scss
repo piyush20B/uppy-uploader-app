@@ -1,0 +1,185 @@
+:root,
+[data-uppy-theme="light"] {
+    --bg-base: #bddb98;
+    --bg-header: #96a07b;
+    --base-clr-01: #006c66;
+    --bg-search-input: #d9d9d9;
+    --shortcut-bg: #363636;
+}
+
+// importing custom fonts
+
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('../fonts/Ubuntu-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Ubuntu-bold';
+    src: url('../fonts/Ubuntu-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Ubuntu-light';
+    src: url('../fonts/Ubuntu-Light.ttf');
+}
+
+@font-face {
+    font-family: 'Ubuntu-medium';
+    src: url('../fonts/Ubuntu-Medium.ttf');
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu';
+}
+
+html {
+    font-size: 63.5%;
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    background: var(--bg-base);
+}
+
+// header
+
+header {
+    position: sticky;
+    width: 100%;
+    height: 7rem;
+    background: var(--bg-header);
+    display: flex;
+    align-items: center;
+    padding: 2px;
+    border-bottom-left-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+
+    .wrapper {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        display: flex;
+    justify-content: space-between;
+        align-items: center;
+
+        a {
+            text-decoration: none;
+            user-select: none;
+
+            .logo {
+                position: relative;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                gap: 1.5rem;
+                margin: 0 2rem;
+
+                .brand-logo {
+                    height: 5rem;
+                    width: 5rem;
+                    object-fit: contain;
+
+                    img {
+                        height: 100%;
+                        width: 100%;
+                        object-fit: contain;
+                    }
+                }
+
+                .brand-name {
+                    font-weight: bolder;
+                    font-size: 3.5rem;
+                    color: var(--base-clr-01);
+                }
+            }
+        }
+
+        .searchBarWrapper {
+            position: relative;
+            width: 50%;
+            height: 60%;
+            background: var(--bg-search-input);
+            border-radius: 3rem;
+            display: flex;
+
+            .searchBar-input {
+                height: 100%;
+                width: 70%;
+                padding-left: 1.5rem;
+                overflow: hidden;
+
+                input#search-content {
+                    height: 100%;
+                    width: 100%;
+                    outline: none;
+                    border: none;
+                    background: transparent;
+                    font-family: "Ubuntu-bold";
+                    font-size: 1.7rem;
+                    color: var(--base-clr-01);
+
+                    &::placeholder {
+                        font-family: "Ubuntu-bold";
+                        font-size: 1.7rem;
+                        color: var(--base-clr-01);
+                    }
+                }
+            }
+
+            .shortcut {
+                height: 100%;
+                width: 15%;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+
+                span {
+                    font-size: 2rem;
+                    color: var(--shortcut-bg);
+                }
+
+                .key {
+                    height: 2rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-weight: bold;
+                    letter-spacing: .3rem;
+                    border-radius: .7rem;
+                    padding: 0 1.1rem;
+                    background: var(--shortcut-bg);
+                    color: var(--bg-search-input);
+                }
+            }
+
+            .search-btn {
+                position: relative;
+                height: 100%;
+                width: 15%;
+                padding: 0.3rem;
+
+                button[type="submit"]{
+                    height: 100%;
+                    width: 100%;
+                    border: 1px solid var(--base-clr-01);
+                    color: var(--base-clr-01);
+                    background: var(--bg-base);
+                    border-radius: 3rem;
+                    cursor: pointer;
+                    transition: .4s;
+
+                    &:active {
+                        transition: 0s;
+                        background: var(--bg-header);
+                    }
+                }
+            }
+        }
+    }
+}
