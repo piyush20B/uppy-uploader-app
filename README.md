@@ -1,7 +1,7 @@
 # Uppy Cloud
 
-<div style="display: flex; justify-content: center; align-items: center; height: 100px; width: 100%; margin: 20px auto;">
-  <img src="uppy/static/src/brand/uppy-main.png" alt="Uppy" style="max-height: 100px; max-width: 100px;">
+<div style="display: flex; justify-content: center; align-items: center; height: 100px; width: 100vw; margin: 20px auto;">
+  <img src="uppy/static/src/brand/uppy-main.png" alt="Uppy" style="height: 100px; width: 100px;">
 </div>
 
 Welcome to Uppy Cloud – Your Personal Cloud Storage Solution 🚀
