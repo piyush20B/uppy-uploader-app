@@ -1,8 +1,7 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth import login, logout
+from django.contrib.auth import logout
 
 # Create your views here.
-
 
 def signup(request):
     return render(request, 'auth/signup.html')
