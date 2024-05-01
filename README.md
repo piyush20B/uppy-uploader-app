@@ -17,7 +17,6 @@ Welcome to Uppy Cloud – Your Personal Cloud Storage Solution 🚀
   - [Installation](#installation)
   - [Usage](#usage)
   - [Contributing](#contributing)
-  - [Terms](#terms)
 
 
 ## Creator
@@ -59,16 +58,16 @@ To set up Uppy Cloud locally, follow these steps:
    git clone https://github.com/piyush20B/uppy-cloud.git
    ```
 
-2. Navigate to the project directory:
-
-   ```bash
-   cd uppy
-   ```
-
-3. Install dependencies:
+2. Install dependencies:
 
    ```bash
    pip install -r requirements.txt
+   ```
+
+3. Navigate to the project directory:
+
+   ```bash
+   cd uppy
    ```
 
 ## Usage
@@ -93,13 +92,4 @@ Since Uppy Cloud is a Django project, you can run it locally using Django's buil
 
 Contributions to Uppy Cloud are highly encouraged! Your ideas, bug fixes, and feature enhancements are invaluable to the project's growth. Feel free to open an issue or submit a pull request to make Uppy Cloud even better!
 
-## Terms
-
-By using Uppy Cloud, you agree to the following terms:
-
 1. **Open Source**: Uppy Cloud is an open-source project. You are welcome to use, modify, and distribute the source code.
-  
-2. **Non-Commercial Use**: While Uppy Cloud is currently not intended for commercial purposes, your support and contributions are immensely appreciated. Let's make cloud storage accessible to everyone! 🌟
-```
-
-This version is tailored to reflect that it's a Django project and provides instructions specific to Django's setup and usage. Let me know if you need further adjustments!
