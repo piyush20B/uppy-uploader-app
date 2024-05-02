@@ -1,6 +1,7 @@
 :root,
 [data-uppy-theme="light"] {
     --bg-base: #bddb98;
+    --bg-base-1: #2a666a;
     --bg-header: #96a07b;
     --base-clr-01: #006c66;
     --bg-search-input: #d9d9d9;
@@ -11,8 +12,9 @@
 
 [data-uppy-theme="dark"] {
     --bg-base: #2a666a;
+    --bg-base-1: #bddb98;
     --bg-header: #8eaeb0;
-    --bg-search-input: #d9d9d9;
+    --bg-search-input: #adc2c3;
     --shortcut-bg: #363636;
     --shadow01: rgba(0, 0, 0, 0.22);
 }
@@ -117,6 +119,13 @@ header {
             background: var(--bg-search-input);
             border-radius: 3rem;
             display: flex;
+            overflow: hidden;
+            transition: .5s;
+            box-sizing: content-box;
+
+            &.focus {
+                border: 2px solid var(--bg-base-1);
+            }
 
             .searchBar-input {
                 height: 100%;
@@ -148,6 +157,14 @@ header {
                 display: flex;
                 justify-content: space-evenly;
                 align-items: center;
+                transform: translateY(0rem);
+                opacity: 1;
+                transition: 0.4s ease;
+
+                &.focus {
+                    transform: translateY(-2rem);
+                    opacity: 0;
+                }
 
                 span {
                     font-size: 2rem;
@@ -180,8 +197,8 @@ header {
                 button[type="submit"] {
                     height: 100%;
                     width: 100%;
-                    border: 1px solid var(--base-clr-01);
-                    color: var(--base-clr-01);
+                    border: 1px solid var(--bg-base-1);
+                    color: var(--bg-base-1);
                     background: var(--bg-base);
                     border-radius: 3rem;
                     cursor: pointer;
@@ -215,7 +232,7 @@ header {
                     border-radius: 3rem;
                     height: 100%;
                     width: 5.5rem;
-                    border: 1px solid var(--base-clr-01);
+                    border: 1px solid var(--bg-base-1);
                     box-shadow: inset 0 2px 12px 0px var(--shadow01);
 
                     .inner-toggler {
@@ -244,7 +261,7 @@ header {
                             transform: translateX(0%);
 
                             &.dark {
-                            transform: translateX(-50%);
+                                transform: translateX(-50%);
                             }
 
                             .icon-t {
@@ -277,6 +294,16 @@ header {
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                transition: .5s;
+
+                svg.menu {
+                    transform: scale(0.6);
+                }
+
+                &.menu:hover {
+                    transition: 0s;
+                    filter: invert(1);
+                }
 
                 &::before {
                     content: '';
@@ -287,10 +314,21 @@ header {
                 }
             }
 
-            .your-profile img {
-                height: 100%;
-                width: 100%;
-                object-fit: contain;
+            .your-profile {
+                position: relative;
+
+                .profile-img-box {
+                    position: absolute;
+                    height: 80%;
+                    width: 80%;
+
+                    img {
+                        border-radius: 50%;
+                        height: 100%;
+                        width: 100%;
+                        object-fit: contain;
+                    }
+                }
             }
         }
     }
