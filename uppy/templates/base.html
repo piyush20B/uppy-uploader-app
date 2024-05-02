@@ -34,7 +34,9 @@
                     <div class="key">/</div>
                 </span>
                 <div class="search-btn">
-                    <button type="submit">Search</button>
+                    <button type="submit">
+                        <i class="bi bi-search"></i>
+                    </button>
                 </div>
             </div>
             <div class="right-cont">
@@ -73,7 +75,35 @@
             </div>
         </div>
 
-        <ul class="profile-dropdown"></ul>
+        <div class="dropdown">
+            <ul>
+                <li>
+                    <a href="#">
+                        <div class="icon-action"></div>
+                        <span class="action-name">Usage</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="icon-action"></div>
+                        <span class="action-name">Your Account</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="icon-action"></div>
+                        <span class="action-name">Settings</span>
+                    </a>
+                </li>
+                <hr>
+                <li>
+                    <a href="#">
+                        <div class="icon-action"></div>
+                        <span class="action-name">Log Out</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
 
         <nav></nav>
     </header>
@@ -102,6 +132,10 @@
             $(document).keydown(function (e) {
                 if (e.ctrlKey && e.key === '/') {
                     $("#search-content").focus();
+                    e.preventDefault();
+                }
+                if (e.key === 'Escape') {
+                    $("#search-content").blur();
                     e.preventDefault();
                 }
             });

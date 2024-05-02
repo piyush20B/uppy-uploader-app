@@ -6,6 +6,7 @@
   --base-clr-01: #006c66;
   --bg-search-input: #d9d9d9;
   --shortcut-bg: #363636;
+  --shortcut-key-clr: #f6f6f6;
   --shadow01: rgba(0, 0, 0, 0.22);
   --light-sun: #0aa5a5;
 }
@@ -15,7 +16,8 @@
   --bg-base-1: #bddb98;
   --bg-header: #8eaeb0;
   --bg-search-input: #adc2c3;
-  --shortcut-bg: #363636;
+  --shortcut-bg: #6e6e6e;
+  --shortcut-key-clr: white;
   --shadow01: rgba(0, 0, 0, 0.22);
 }
 
@@ -114,6 +116,11 @@ header .wrapper .searchBarWrapper {
   transition: 0.5s;
   box-sizing: content-box;
 }
+@media (max-width: 786px) {
+  header .wrapper .searchBarWrapper {
+    display: none;
+  }
+}
 header .wrapper .searchBarWrapper.focus {
   border: 2px solid var(--bg-base-1);
 }
@@ -170,7 +177,7 @@ header .wrapper .searchBarWrapper .shortcut .key {
   border-radius: 0.7rem;
   padding: 0 1.1rem;
   background: var(--shortcut-bg);
-  color: var(--bg-search-input);
+  color: var(--shortcut-key-clr);
 }
 header .wrapper .searchBarWrapper .shortcut .key.ls {
   letter-spacing: 0.3rem;
@@ -180,16 +187,20 @@ header .wrapper .searchBarWrapper .search-btn {
   height: 100%;
   width: 15%;
   padding: 0.3rem;
+  display: flex;
+  justify-content: end;
+  align-items: center;
 }
 header .wrapper .searchBarWrapper .search-btn button[type=submit] {
   height: 100%;
-  width: 100%;
+  width: 70%;
   border: 1px solid var(--bg-base-1);
   color: var(--bg-base-1);
   background: var(--bg-base);
   border-radius: 3rem;
   cursor: pointer;
   transition: 0.4s;
+  font-size: 1.7rem;
 }
 header .wrapper .searchBarWrapper .search-btn button[type=submit]:active {
   transition: 0s;
@@ -280,7 +291,7 @@ header .wrapper .right-cont .your-profile svg.menu {
 header .wrapper .right-cont .toggle-menu.menu:hover,
 header .wrapper .right-cont .your-profile.menu:hover {
   transition: 0s;
-  filter: invert(1);
+  filter: invert(0.1);
 }
 header .wrapper .right-cont .toggle-menu::before,
 header .wrapper .right-cont .your-profile::before {

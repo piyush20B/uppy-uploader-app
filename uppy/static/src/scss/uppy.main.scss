@@ -6,6 +6,7 @@
     --base-clr-01: #006c66;
     --bg-search-input: #d9d9d9;
     --shortcut-bg: #363636;
+    --shortcut-key-clr: #f6f6f6;
     --shadow01: rgba(0, 0, 0, 0.22);
     --light-sun: #0aa5a5;
 }
@@ -15,7 +16,8 @@
     --bg-base-1: #bddb98;
     --bg-header: #8eaeb0;
     --bg-search-input: #adc2c3;
-    --shortcut-bg: #363636;
+    --shortcut-bg: #6e6e6e;
+    --shortcut-key-clr: white;
     --shadow01: rgba(0, 0, 0, 0.22);
 }
 
@@ -123,6 +125,10 @@ header {
             transition: .5s;
             box-sizing: content-box;
 
+            @media (max-width: 786px) {
+                display: none;
+            }
+
             &.focus {
                 border: 2px solid var(--bg-base-1);
             }
@@ -180,7 +186,7 @@ header {
                     border-radius: .7rem;
                     padding: 0 1.1rem;
                     background: var(--shortcut-bg);
-                    color: var(--bg-search-input);
+                    color: var(--shortcut-key-clr);
 
                     &.ls {
                         letter-spacing: .3rem;
@@ -193,16 +199,20 @@ header {
                 height: 100%;
                 width: 15%;
                 padding: 0.3rem;
+                display: flex;
+                justify-content: end;
+                align-items: center;
 
                 button[type="submit"] {
                     height: 100%;
-                    width: 100%;
+                    width: 70%;
                     border: 1px solid var(--bg-base-1);
                     color: var(--bg-base-1);
                     background: var(--bg-base);
                     border-radius: 3rem;
                     cursor: pointer;
                     transition: .4s;
+                    font-size: 1.7rem;
 
                     &:active {
                         transition: 0s;
@@ -302,7 +312,7 @@ header {
 
                 &.menu:hover {
                     transition: 0s;
-                    filter: invert(1);
+                    filter: invert(.1);
                 }
 
                 &::before {
