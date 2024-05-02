@@ -5,6 +5,16 @@
     --base-clr-01: #006c66;
     --bg-search-input: #d9d9d9;
     --shortcut-bg: #363636;
+    --shadow01: rgba(0, 0, 0, 0.22);
+    --light-sun: #0aa5a5;
+}
+
+[data-uppy-theme="dark"] {
+    --bg-base: #2a666a;
+    --bg-header: #8eaeb0;
+    --bg-search-input: #d9d9d9;
+    --shortcut-bg: #363636;
+    --shadow01: rgba(0, 0, 0, 0.22);
 }
 
 // importing custom fonts
@@ -150,11 +160,14 @@ header {
                     justify-content: center;
                     align-items: center;
                     font-weight: bold;
-                    letter-spacing: .3rem;
                     border-radius: .7rem;
                     padding: 0 1.1rem;
                     background: var(--shortcut-bg);
                     color: var(--bg-search-input);
+
+                    &.ls {
+                        letter-spacing: .3rem;
+                    }
                 }
             }
 
@@ -179,6 +192,105 @@ header {
                         background: var(--bg-header);
                     }
                 }
+            }
+        }
+
+        .right-cont {
+            height: 100%;
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+
+            .toggle-theme {
+                height: 45%;
+                position: relative;
+
+                .outer-shell {
+                    cursor: pointer;
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    padding: 0.25rem;
+                    border-radius: 3rem;
+                    height: 100%;
+                    width: 5.5rem;
+                    border: 1px solid var(--base-clr-01);
+                    box-shadow: inset 0 2px 12px 0px var(--shadow01);
+
+                    .inner-toggler {
+                        position: relative;
+                        height: 2.3rem;
+                        width: 2.3rem;
+                        overflow: hidden;
+                        border-radius: 50%;
+                        transition: .5s ease;
+                        background: var(--bg-base);
+                        box-shadow: inset -2px -2px 2px 0px var(--shadow01);
+                        transform: translateX(2px);
+
+                        &.dark {
+                            transform: translateX(24px);
+                        }
+
+                        .icon-theme {
+                            position: relative;
+                            height: 100%;
+                            min-width: 4.3rem;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            transition: .5s ease-in;
+                            transform: translateX(0%);
+
+                            &.dark {
+                            transform: translateX(-50%);
+                            }
+
+                            .icon-t {
+                                position: relative;
+                                height: 100%;
+                                width: 2.3rem !important;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+
+                                svg {
+                                    height: 80%;
+                                    width: 80%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .toggle-menu,
+            .your-profile {
+                height: 5rem;
+                width: 5rem;
+                background: var(--bg-search-input);
+                border-radius: 50%;
+                cursor: pointer;
+                position: relative;
+                user-select: none;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    height: 100%;
+                    width: 100%;
+                    z-index: 100;
+                }
+            }
+
+            .your-profile img {
+                height: 100%;
+                width: 100%;
+                object-fit: contain;
             }
         }
     }
