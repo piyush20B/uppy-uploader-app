@@ -33,7 +33,7 @@ Feel free to customize this information as needed for your project! Let me know 
 
 ## Introduction
 
-Uppy Cloud offers you a seamless file uploading and storage experience. Upload, save, and access your files anytime, anywhere.
+Uppy Cloud offers you a seamless file uploading and storage experience. Upload, save, and access your files anytime, anywhere though a WEB Application.
 
 ## Features
 
