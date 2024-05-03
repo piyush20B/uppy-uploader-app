@@ -116,7 +116,24 @@
         </div>
 
         <nav>
-            
+
+            <div class="backdropper"></div>
+
+            <ul>
+                <li class="about">
+                    <a href="#"></a>
+                </li>
+                <li class="favourites">
+                    <a href="#"></a>
+                </li>
+                <li class="allUploads">
+                    <a href="#"></a>
+                </li>
+                <li class="terms-conditions">
+                    <a href="#"></a>
+                </li>
+            </ul>
+
         </nav>
 
     </header>
@@ -189,25 +206,25 @@
         });
 
         $(document).ready(function () {
-        // Set initial state
-        $('#profile-dropdown').attr('isOpen', 'closed').hide();
+            // Set initial state
+            $('#profile-dropdown').attr('isOpen', 'closed').hide();
 
-        function closeDropdown() {
-            $('#profile-dropdown').attr('isOpen', 'closed').stop(true, true).slideUp(300).fadeOut(300);
-        }
-
-        $('.link-profile-nav').click(function(){closeDropdown()});
-
-        // Click event
-        $('#profile-dropdown-toggle').click(function () {
-            const isOpen = $('#profile-dropdown').attr('isOpen');
-            if (isOpen === "closed") {
-                $('#profile-dropdown').attr('isOpen', 'opened').stop(true, true).slideDown(300).fadeIn(300);
-            } else if (isOpen === "opened") {
+            function closeDropdown() {
                 $('#profile-dropdown').attr('isOpen', 'closed').stop(true, true).slideUp(300).fadeOut(300);
             }
+
+            $('.link-profile-nav').click(function () { closeDropdown() });
+
+            // Click event
+            $('#profile-dropdown-toggle').click(function () {
+                const isOpen = $('#profile-dropdown').attr('isOpen');
+                if (isOpen === "closed") {
+                    $('#profile-dropdown').attr('isOpen', 'opened').stop(true, true).slideDown(300).fadeIn(300);
+                } else if (isOpen === "opened") {
+                    $('#profile-dropdown').attr('isOpen', 'closed').stop(true, true).slideUp(300).fadeOut(300);
+                }
+            });
         });
-    });
 
     </script>
 
