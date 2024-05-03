@@ -63,6 +63,11 @@ body {
   min-height: 100vh;
   width: 100%;
   background: var(--bg-base);
+  overflow-x: hidden;
+}
+
+.ovh {
+  overflow: hidden !important;
 }
 
 header {
@@ -328,7 +333,6 @@ header .wrapper .right-cont .your-profile .profile-img-box img {
 }
 header .dropdown {
   position: absolute;
-  top: 0;
   height: auto;
   width: 20rem;
   padding: 0.9rem;

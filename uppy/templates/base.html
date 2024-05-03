@@ -77,10 +77,10 @@
 
         <!-- future projects -->
 
-        <div class="dropdown" id="profile-dropdown">
+        <div class="dropdown" id="profile-dropdown" isOpen="closed">
             <ul>
                 <li>
-                    <a href="#" class="use">
+                    <a href="#" class="use link-profile-nav">
                         <div class="icon-action use">
                             <i class="bi bi-graph-up"></i>
                         </div>
@@ -88,7 +88,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="prfle">
+                    <a href="#" class="prfle link-profile-nav">
                         <div class="icon-action prfle">
                             <i class="bi bi-person-fill"></i>
                         </div>
@@ -96,7 +96,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="sett">
+                    <a href="#" class="sett link-profile-nav">
                         <div class="icon-action sett">
                             <i class="bi bi-gear-wide-connected"></i>
                         </div>
@@ -105,7 +105,7 @@
                 </li>
                 <hr>
                 <li>
-                    <a href="#" class="lout">
+                    <a href="#" class="lout link-profile-nav">
                         <div class="icon-action lout">
                             <i class="bi bi-box-arrow-right"></i>
                         </div>
@@ -173,9 +173,9 @@
     <script>
         const button = document.querySelector('#profile-dropdown-toggle');
         const tooltip = document.querySelector('#profile-dropdown');
-    
+
         Popper.createPopper(button, tooltip, {
-            placement: 'bottom-start', 
+            placement: 'bottom-start',
             modifiers: [
                 {
                     name: 'offset',
@@ -185,8 +185,30 @@
                 }
             ],
         });
+
+        $(document).ready(function () {
+        // Set initial state
+        $('#profile-dropdown').attr('isOpen', 'closed').hide();
+
+        function closeDropdown() {
+            $('#profile-dropdown').attr('isOpen', 'closed').stop(true, true).slideUp(300).fadeOut(300);
+        }
+
+        $('.link-profile-nav').click(function(){closeDropdown()});
+
+        // Click event
+        $('#profile-dropdown-toggle').click(function () {
+            const isOpen = $('#profile-dropdown').attr('isOpen');
+            if (isOpen === "closed") {
+                $('#profile-dropdown').attr('isOpen', 'opened').stop(true, true).slideDown(300).fadeIn(300);
+            } else if (isOpen === "opened") {
+                $('#profile-dropdown').attr('isOpen', 'closed').stop(true, true).slideUp(300).fadeOut(300);
+            }
+        });
+    });
+
     </script>
-    
+
 
 
 
