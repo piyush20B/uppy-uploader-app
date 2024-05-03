@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     # my apps
     'authuppy.apps.AuthuppyConfig',
     'uppyApp.apps.UppyappConfig',
+    'usages.apps.UsagesConfig',
     'uploads.apps.UploadsConfig',
     'terms.apps.TermsConfig',
 ]

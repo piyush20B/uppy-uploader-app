@@ -9,6 +9,7 @@
     --shortcut-key-clr: #f6f6f6;
     --shadow01: rgba(0, 0, 0, 0.22);
     --light-sun: #0aa5a5;
+    --profile-dropdown: #f2eded;
 }
 
 [data-uppy-theme="dark"] {
@@ -339,6 +340,32 @@ header {
                         object-fit: contain;
                     }
                 }
+            }
+        }
+    }
+
+    .dropdown {
+        position: absolute;
+        top: 0;
+        height: auto;
+        width: 20rem;
+        padding: 0.9rem;
+        background: var(--profile-dropdown);
+
+        ul {
+            position: relative;
+            height: 100%;
+            width: 100%;
+            list-style-type: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+
+            li {
+            background: aqua;
+                height: 3rem;
+                width: 100%;
             }
         }
     }
