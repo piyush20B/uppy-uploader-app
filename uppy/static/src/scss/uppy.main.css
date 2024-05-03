@@ -9,7 +9,11 @@
   --shortcut-key-clr: #f6f6f6;
   --shadow01: rgba(0, 0, 0, 0.22);
   --light-sun: #0aa5a5;
-  --profile-dropdown: rgba($color: hsl(87, 48%, 73%): 0.7);
+  --profile-dropdown: #ffffff40;
+  --profile-usage: #056d05;
+  --profile-profile: #117ebe;
+  --profile-settings: #e2e1e1;
+  --profile-logout: #d73232;
 }
 
 [data-uppy-theme=dark] {
@@ -20,6 +24,11 @@
   --shortcut-bg: #6e6e6e;
   --shortcut-key-clr: white;
   --shadow01: rgba(0, 0, 0, 0.22);
+  --profile-dropdown: rgba($color: #2a666a, $alpha:0.5);
+  --profile-usage: #09cd09;
+  --profile-profile: #61c5ff;
+  --profile-settings: #c3c3c3;
+  --profile-logout: #fc7171;
 }
 
 @font-face {
@@ -323,9 +332,11 @@ header .dropdown {
   height: auto;
   width: 20rem;
   padding: 0.9rem;
-  background: rgba(189, 219, 152, 0.7);
+  background: var(--profile-dropdown);
   border-radius: 1rem;
   border: 2px solid var(--bg-base-1);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
 }
 header .dropdown ul {
   position: relative;
@@ -354,6 +365,26 @@ header .dropdown ul li a {
   width: 100%;
   display: flex;
   text-decoration: none;
+  transition: 0.4s;
+}
+header .dropdown ul li a:hover {
+  transition: 0s;
+  background: rgba(255, 255, 255, 0.2196078431);
+}
+header .dropdown ul li a:active {
+  background: rgba(255, 255, 255, 0.3294117647);
+}
+header .dropdown ul li a.use {
+  border-bottom: 1px solid var(--profile-usage);
+}
+header .dropdown ul li a.prfle {
+  border-bottom: 1px solid var(--profile-profile);
+}
+header .dropdown ul li a.sett {
+  border-bottom: 1px solid var(--profile-settings);
+}
+header .dropdown ul li a.lout {
+  border-bottom: 1px solid var(--profile-logout);
 }
 header .dropdown ul li a .icon-action {
   height: 4rem;
@@ -361,7 +392,18 @@ header .dropdown ul li a .icon-action {
   display: grid;
   place-items: center;
   font-size: 2rem;
-  color: var(--clr);
+}
+header .dropdown ul li a .icon-action.use {
+  color: var(--profile-usage);
+}
+header .dropdown ul li a .icon-action.prfle {
+  color: var(--profile-profile);
+}
+header .dropdown ul li a .icon-action.sett {
+  color: var(--profile-settings);
+}
+header .dropdown ul li a .icon-action.lout {
+  color: var(--profile-logout);
 }
 header .dropdown ul li a .action-name {
   position: relative;
@@ -370,4 +412,16 @@ header .dropdown ul li a .action-name {
   font-size: 1.6rem;
   display: flex;
   align-items: center;
+}
+header .dropdown ul li a .action-name.use {
+  color: var(--profile-usage);
+}
+header .dropdown ul li a .action-name.prfle {
+  color: var(--profile-profile);
+}
+header .dropdown ul li a .action-name.sett {
+  color: var(--profile-settings);
+}
+header .dropdown ul li a .action-name.lout {
+  color: var(--profile-logout);
 }/*# sourceMappingURL=uppy.main.css.map */
