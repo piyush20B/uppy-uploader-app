@@ -9,7 +9,7 @@
     --shortcut-key-clr: #f6f6f6;
     --shadow01: rgba(0, 0, 0, 0.22);
     --light-sun: #0aa5a5;
-    --profile-dropdown: #f2eded;
+    --profile-dropdown: rgba($color: hsl(87, 48%, 73%): 0.7);
 }
 
 [data-uppy-theme="dark"] {
@@ -350,7 +350,9 @@ header {
         height: auto;
         width: 20rem;
         padding: 0.9rem;
-        background: var(--profile-dropdown);
+        background: rgba($color: #bddb98, $alpha: .7);
+        border-radius: 1rem;
+        border: 2px solid var(--bg-base-1);
 
         ul {
             position: relative;
@@ -362,16 +364,23 @@ header {
             align-items: center;
             gap: 1rem;
 
-            li {
-                background: aqua;
-                height: 3rem;
+            hr {
                 width: 100%;
+                border-color: var(--bg-base-1);
+            }
+
+            li {
+                height: 4rem;
+                width: 100%;
+                display: flex;
+                background: aqua;
                 border-radius: 0.5rem;
                 overflow: hidden;
 
                 a {
                     height: 100%;
                     width: 100%;
+                    display: flex;
                 }
             }
         }

@@ -9,7 +9,7 @@
   --shortcut-key-clr: #f6f6f6;
   --shadow01: rgba(0, 0, 0, 0.22);
   --light-sun: #0aa5a5;
-  --profile-dropdown: #f2eded;
+  --profile-dropdown: rgba($color: hsl(87, 48%, 73%): 0.7);
 }
 
 [data-uppy-theme=dark] {
@@ -323,7 +323,9 @@ header .dropdown {
   height: auto;
   width: 20rem;
   padding: 0.9rem;
-  background: var(--profile-dropdown);
+  background: rgba(189, 219, 152, 0.7);
+  border-radius: 1rem;
+  border: 2px solid var(--bg-base-1);
 }
 header .dropdown ul {
   position: relative;
@@ -335,8 +337,20 @@ header .dropdown ul {
   align-items: center;
   gap: 1rem;
 }
-header .dropdown ul li {
-  background: aqua;
-  height: 3rem;
+header .dropdown ul hr {
   width: 100%;
+  border-color: var(--bg-base-1);
+}
+header .dropdown ul li {
+  height: 4rem;
+  width: 100%;
+  display: flex;
+  background: aqua;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+header .dropdown ul li a {
+  height: 100%;
+  width: 100%;
+  display: flex;
 }/*# sourceMappingURL=uppy.main.css.map */
