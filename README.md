@@ -1,6 +1,6 @@
 # Uppy Cloud
 
-<div style="display: flex; justify-content: center; align-items: center; height: 100px; width: 1000px; margin: 20px auto;">
+<div style="height: 100px; width: 1000px; margin: 20px auto;">
   <img src="uppy/static/src/brand/uppy-main.png" alt="Uppy" style="height: 100px; width: 100px;">
 </div>
 
