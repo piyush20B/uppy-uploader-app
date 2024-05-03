@@ -345,7 +345,7 @@ header .dropdown ul li {
   height: 4rem;
   width: 100%;
   display: flex;
-  background: aqua;
+  background: rgba(0, 0, 0, 0.22);
   border-radius: 0.5rem;
   overflow: hidden;
 }
@@ -353,4 +353,21 @@ header .dropdown ul li a {
   height: 100%;
   width: 100%;
   display: flex;
+  text-decoration: none;
+}
+header .dropdown ul li a .icon-action {
+  height: 4rem;
+  width: 4rem;
+  display: grid;
+  place-items: center;
+  font-size: 2rem;
+  color: var(--clr);
+}
+header .dropdown ul li a .action-name {
+  position: relative;
+  height: 100%;
+  width: calc(100% - 4rem);
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
 }/*# sourceMappingURL=uppy.main.css.map */

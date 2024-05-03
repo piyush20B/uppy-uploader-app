@@ -81,26 +81,34 @@
             <ul>
                 <li>
                     <a href="#">
-                        <div class="icon-action"></div>
+                        <div class="icon-action" style="--clr: #008000;">
+                            <i class="bi bi-graph-up"></i>
+                        </div>
                         <span class="action-name">Usage</span>
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <div class="icon-action"></div>
-                        <span class="action-name">Your Account</span>
+                        <div class="icon-action" style="--clr:  #61c5ff;">
+                            <i class="bi bi-person-fill"></i>
+                        </div>
+                        <span class="action-name">Profile</span>
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <div class="icon-action"></div>
+                        <div class="icon-action" style="--clr: #565555;">
+                            <i class="bi bi-gear-wide-connected"></i>
+                        </div>
                         <span class="action-name">Settings</span>
                     </a>
                 </li>
                 <hr>
                 <li>
                     <a href="#">
-                        <div class="icon-action"></div>
+                        <div class="icon-action" style="--clr: #de4444;">
+                            <i class="bi bi-box-arrow-right"></i>
+                        </div>
                         <span class="action-name">Log Out</span>
                     </a>
                 </li>
@@ -108,11 +116,11 @@
         </div>
 
         <nav></nav>
-    
+
     </header>
 
     <main></main>
-    
+
     <footer></footer>
 
 
@@ -159,10 +167,27 @@
     <!-- <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script> -->
     <!-- tooltips -->
-    <script src="https://unpkg.com/popper.js@1"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
     <!-- <script src="https://unpkg.com/tippy.js@5/dist/tippy-bundle.iife.js"></script> -->.
-
+    <script>
+        const button = document.querySelector('#profile-dropdown-toggle');
+        const tooltip = document.querySelector('#profile-dropdown');
     
+        Popper.createPopper(button, tooltip, {
+            placement: 'bottom-start', 
+            modifiers: [
+                {
+                    name: 'offset',
+                    options: {
+                        offset: [0, 10],
+                    },
+                }
+            ],
+        });
+    </script>
+    
+
+
 
     {% block customScripts %}{% endblock customScripts %}
 
