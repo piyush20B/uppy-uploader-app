@@ -567,7 +567,7 @@ header {
                     margin: 0;
                     display: grid;
                     gap: 1rem;
-                    grid-template-columns: repeat(4, 1fr); // Default to 4 columns
+                    grid-template-columns: repeat(4, 1fr);
 
                     li {
                         height: 10rem;
@@ -589,13 +589,13 @@ header {
 
                 @media screen and (max-width: 1024px) {
                     ul {
-                        grid-template-columns: repeat(2, 1fr); // 2 columns on tablets
+                        grid-template-columns: repeat(2, 1fr);
                     }
                 }
 
                 @media screen and (max-width: 600px) {
                     ul {
-                        grid-template-columns: repeat(1, 1fr); // 1 column on mobile
+                        grid-template-columns: repeat(1, 1fr);
                     }
                 }
             }
