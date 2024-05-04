@@ -24,7 +24,7 @@
   --shortcut-bg: #6e6e6e;
   --shortcut-key-clr: white;
   --shadow01: rgba(0, 0, 0, 0.22);
-  --profile-dropdown: rgba($color: #2a666a, $alpha:0.5);
+  --profile-dropdown: rgba($color: #2a666a, $alpha: 0.5);
   --profile-usage: #09cd09;
   --profile-profile: #61c5ff;
   --profile-settings: #c3c3c3;
@@ -68,6 +68,12 @@ body {
 
 .ovh {
   overflow: hidden !important;
+}
+
+.usn {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 header {
@@ -175,6 +181,11 @@ header .wrapper .searchBarWrapper .shortcut {
   opacity: 1;
   transition: 0.4s ease;
 }
+@media (max-width: 910px) {
+  header .wrapper .searchBarWrapper .shortcut {
+    display: none;
+  }
+}
 header .wrapper .searchBarWrapper .shortcut.focus {
   transform: translateY(-2rem);
   opacity: 0;
@@ -205,6 +216,11 @@ header .wrapper .searchBarWrapper .search-btn {
   display: flex;
   justify-content: end;
   align-items: center;
+}
+@media (max-width: 910px) {
+  header .wrapper .searchBarWrapper .search-btn {
+    width: 30%;
+  }
 }
 header .wrapper .searchBarWrapper .search-btn button[type=submit] {
   height: 100%;

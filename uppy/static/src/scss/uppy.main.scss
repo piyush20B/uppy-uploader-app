@@ -24,7 +24,7 @@
     --shortcut-bg: #6e6e6e;
     --shortcut-key-clr: white;
     --shadow01: rgba(0, 0, 0, 0.22);
-    --profile-dropdown: rgba($color: #2a666a,  $alpha:0.5);
+    --profile-dropdown: rgba($color: #2a666a, $alpha: 0.5);
     --profile-usage: #09cd09;
     --profile-profile: #61c5ff;
     --profile-settings: #c3c3c3;
@@ -187,6 +187,10 @@ header {
                 opacity: 1;
                 transition: 0.4s ease;
 
+                @media (max-width: 910px) {
+                    display: none;
+                }
+
                 &.focus {
                     transform: translateY(-2rem);
                     opacity: 0;
@@ -222,6 +226,10 @@ header {
                 display: flex;
                 justify-content: end;
                 align-items: center;
+
+                @media (max-width: 910px) {
+                    width: 30%;
+                }
 
                 button[type="submit"] {
                     height: 100%;
@@ -412,16 +420,19 @@ header {
                         background: #ffffff54;
                     }
 
-                    &.use{
+                    &.use {
                         border-bottom: 1px solid var(--profile-usage);
                     }
-                    &.prfle{
+
+                    &.prfle {
                         border-bottom: 1px solid var(--profile-profile);
                     }
-                    &.sett{
+
+                    &.sett {
                         border-bottom: 1px solid var(--profile-settings);
                     }
-                    &.lout{
+
+                    &.lout {
                         border-bottom: 1px solid var(--profile-logout);
                     }
 
@@ -432,16 +443,19 @@ header {
                         place-items: center;
                         font-size: 2rem;
 
-                        &.use{
+                        &.use {
                             color: var(--profile-usage);
                         }
-                        &.prfle{
+
+                        &.prfle {
                             color: var(--profile-profile);
                         }
-                        &.sett{
+
+                        &.sett {
                             color: var(--profile-settings);
                         }
-                        &.lout{
+
+                        &.lout {
                             color: var(--profile-logout);
                         }
                     }
@@ -454,16 +468,19 @@ header {
                         display: flex;
                         align-items: center;
 
-                        &.use{
+                        &.use {
                             color: var(--profile-usage);
                         }
-                        &.prfle{
+
+                        &.prfle {
                             color: var(--profile-profile);
                         }
-                        &.sett{
+
+                        &.sett {
                             color: var(--profile-settings);
                         }
-                        &.lout{
+
+                        &.lout {
                             color: var(--profile-logout);
                         }
                     }
