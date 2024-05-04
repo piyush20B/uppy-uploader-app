@@ -552,6 +552,10 @@ header {
             overflow: auto;
             overflow-x: hidden;
 
+            &::-webkit-scrollbar {
+                display: none;
+            }
+
             nav {
                 position: relative;
                 height: 100%;

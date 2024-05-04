@@ -506,6 +506,9 @@ header .nav-wrapper .nav-main-container {
   overflow: auto;
   overflow-x: hidden;
 }
+header .nav-wrapper .nav-main-container::-webkit-scrollbar {
+  display: none;
+}
 header .nav-wrapper .nav-main-container nav {
   position: relative;
   height: 100%;
