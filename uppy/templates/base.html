@@ -25,19 +25,21 @@
                 </div>
             </a>
             <div class="searchBarWrapper">
-                <div class="searchBar-input">
-                    <input id="search-content" name="search-content" type="text" placeholder="Search Your Files!!">
-                </div>
-                <span class="shortcut">
-                    <div class="key ls">ctrl</div>
-                    <span>+</span>
-                    <div class="key">/</div>
-                </span>
-                <div class="search-btn">
-                    <button type="submit">
-                        <i class="bi bi-search"></i>
-                    </button>
-                </div>
+                <form id="search-form" action="{% url 'search' %}" method="get" style="width: 100%; height: 100%; display: flex;">
+                    <div class="searchBar-input">
+                        <input id="search-content" name="search-content" type="text" placeholder="Search Your Files!!" autocomplete="off">
+                    </div>
+                    <span class="shortcut">
+                        <div class="key ls">ctrl</div>
+                        <span>+</span>
+                        <div class="key">/</div>
+                    </span>
+                    <div class="search-btn">
+                        <button type="submit">
+                            <i class="bi bi-search"></i>
+                        </button>
+                    </div>
+                </form>
             </div>
             <div class="right-cont">
                 <div class="toggle-theme">
@@ -182,6 +184,7 @@
             }
 
         })
+        const searchUrl = "{% url 'search' %}";
     </script>
     <script>
         $(document).ready(function () {

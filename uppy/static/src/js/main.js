@@ -76,4 +76,25 @@ $(document).ready(function () {
             });
         }
     });
+
+    // Search Function...
+    // Add event listener for form submission...
+    $('#search-form').submit(function (event) {
+        // Prevent default form submission...
+        event.preventDefault();
+
+        // Get the search query from the input field...
+        const searchContent = $('#search-content').val();
+
+        // Redirect to the search URL with the search query...
+        window.location.href = searchUrl + "?query=" + encodeURIComponent(searchContent);
+    });
+
+    // Add event listener for pressing enter in the input field...
+    $('#search-content').keypress(function (event) {
+        if (event.key === 'Enter') {
+            // Trigger form submission when enter key is pressed...
+            $('#search-form').submit();
+        }
+    });
 });
