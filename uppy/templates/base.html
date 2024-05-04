@@ -62,10 +62,18 @@
                     </div>
                 </div>
                 <div class="toggle-menu menu">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="menu" viewBox="0 0 512 512">
-                        <path fill="none" stroke="#006c66" stroke-linecap="round" stroke-miterlimit="10"
-                            stroke-width="48" d="M88 152h336M88 256h336M88 360h336" />
-                    </svg>
+                    <div class="open-menu" isOpen="closed">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="menu" viewBox="0 0 512 512">
+                            <path fill="none" stroke="#006c66" stroke-linecap="round" stroke-miterlimit="10"
+                                stroke-width="48" d="M88 152h336M88 256h336M88 360h336" />
+                        </svg>
+                    </div>
+                    <div class="open-menu" isOpen="closed">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="menu" viewBox="0 0 512 512">
+                            <path fill="none" stroke="#006c66" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="48" d="M368 368L144 144M368 144L144 368" />
+                        </svg>
+                    </div>
                 </div>
                 <div class="your-profile" id="profile-dropdown-toggle">
                     <div class="profile-img-box">
@@ -115,26 +123,36 @@
             </ul>
         </div>
 
-        <!-- <nav>
+        <div class="nav-wrapper">
+            <div class="backdrop"></div>
+            <nav>
 
-            <div class="backdropper"></div>
+                <ul>
+                    <li class="about">
+                        <a href="#">About</a>
+                    </li>
+                    <li class="favourites">
+                        <a href="#">Favourites</a>
+                    </li>
+                    <li class="allUploads">
+                        <a href="#">Your Uploads</a>
+                    </li>
+                    <li class="search mobile-nav-item">
+                        <a href="#">Search</a>
+                    </li>
+                    <li class="chat">
+                        <a href="#">Chat</a>
+                    </li>
+                    <li class="pricing">
+                        <a href="#">Plans and Pricings</a>
+                    </li>
+                    <li class="blogs">
+                        <a href="#">Blogs and Communities</a>
+                    </li>
+                </ul>
 
-            <ul>
-                <li class="about">
-                    <a href="#"></a>
-                </li>
-                <li class="favourites">
-                    <a href="#"></a>
-                </li>
-                <li class="allUploads">
-                    <a href="#"></a>
-                </li>
-                <li class="terms-conditions">
-                    <a href="#"></a>
-                </li>
-            </ul>
-
-        </nav> -->
+            </nav>
+        </div>
 
     </header>
 
@@ -225,6 +243,16 @@
                 }
             });
         });
+
+        $('.toggle-menu').click(function () {
+            if ($('.toggle-menu .open-menu').attr('isOpen') === "closed") {
+                $('.toggle-menu .open-menu').addClass('active');
+                $('.toggle-menu .open-menu').attr('isOpen', "opened");
+            } else if ($('.toggle-menu .open-menu').attr('isOpen') === "opened") {
+                $('.toggle-menu .open-menu').removeClass('active');
+                $('.toggle-menu .open-menu').attr('isOpen', "closed");
+            }
+        })
 
     </script>
 

@@ -14,6 +14,8 @@
   --profile-profile: #117ebe;
   --profile-settings: #e2e1e1;
   --profile-logout: #d73232;
+  --z-index-profile-dropdown: 10000000;
+  --z-index-navigation: 1000000;
 }
 
 [data-uppy-theme=dark] {
@@ -314,10 +316,30 @@ header .wrapper .right-cont .your-profile {
   justify-content: center;
   align-items: center;
   transition: 0.5s;
+  overflow: hidden;
 }
-header .wrapper .right-cont .toggle-menu svg.menu,
-header .wrapper .right-cont .your-profile svg.menu {
+header .wrapper .right-cont .toggle-menu .open-menu,
+header .wrapper .right-cont .your-profile .open-menu {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  transform: translateY(0px);
+  transition: 0.5s ease;
+}
+header .wrapper .right-cont .toggle-menu .open-menu.active,
+header .wrapper .right-cont .your-profile .open-menu.active {
+  transform: translateY(-50px);
+}
+header .wrapper .right-cont .toggle-menu .open-menu svg.menu,
+header .wrapper .right-cont .your-profile .open-menu svg.menu {
   transform: scale(0.6);
+}
+header .wrapper .right-cont .toggle-menu.menu,
+header .wrapper .right-cont .your-profile.menu {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
 }
 header .wrapper .right-cont .toggle-menu.menu:hover,
 header .wrapper .right-cont .your-profile.menu:hover {
@@ -357,6 +379,7 @@ header .dropdown {
   border: 2px solid var(--bg-base-1);
   -webkit-backdrop-filter: blur(20px);
           backdrop-filter: blur(20px);
+  z-index: var(--z-index-profile-dropdown);
 }
 header .dropdown ul {
   position: relative;
@@ -444,4 +467,20 @@ header .dropdown ul li a .action-name.sett {
 }
 header .dropdown ul li a .action-name.lout {
   color: var(--profile-logout);
+}
+header .nav-wrapper {
+  position: absolute;
+  z-index: var(--z-index-navigation);
+  top: 7rem;
+  height: calc(100vh - 7rem);
+  width: 100%;
+  background: #000;
+}
+header .mobile-nav-item {
+  display: none;
+}
+@media (max-width: 786px) {
+  header .mobile-nav-item {
+    display: block;
+  }
 }/*# sourceMappingURL=uppy.main.css.map */

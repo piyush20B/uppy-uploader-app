@@ -14,6 +14,8 @@
     --profile-profile: #117ebe;
     --profile-settings: #e2e1e1;
     --profile-logout: #d73232;
+    --z-index-profile-dropdown: 10000000;
+    --z-index-navigation: 1000000;
 }
 
 [data-uppy-theme="dark"] {
@@ -333,9 +335,30 @@ header {
                 justify-content: center;
                 align-items: center;
                 transition: .5s;
+                overflow: hidden;
 
-                svg.menu {
-                    transform: scale(0.6);
+                .open-menu {
+                    position: relative;
+                    height: 100%;
+                    width: 100%;
+                    transform: translateY(0px);
+                    transition: .5s ease;
+
+                    &.active {
+                        transform: translateY(-50px);
+                    }
+
+                    svg.menu {
+                        transform: scale(0.6);
+
+                    }
+                }
+
+                &.menu {
+                    display: flex;
+                    align-items: center;
+                    justify-content: start;
+                    flex-direction: column;
                 }
 
                 &.menu:hover {
@@ -380,6 +403,7 @@ header {
         border-radius: 1rem;
         border: 2px solid var(--bg-base-1);
         backdrop-filter: blur(20px);
+        z-index: var(--z-index-profile-dropdown);
 
         ul {
             position: relative;
@@ -486,6 +510,23 @@ header {
                     }
                 }
             }
+        }
+    }
+
+    .nav-wrapper {
+        position: absolute;
+        z-index: var(--z-index-navigation);
+        top: 7rem;
+        height: calc(100vh - 7rem);
+        width: 100%;
+        background: #000;
+    }
+
+    .mobile-nav-item {
+        display: none;
+
+        @media (max-width: 786px) {
+            display: block;
         }
     }
 }
