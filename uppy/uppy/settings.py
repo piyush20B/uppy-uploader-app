@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'uppyApp.apps.UppyappConfig',
     'usages.apps.UsagesConfig',
     'uploads.apps.UploadsConfig',
+    'chat.apps.ChatConfig',
     'terms.apps.TermsConfig',
 ]
 
