@@ -82,7 +82,7 @@ body {
 }
 
 .usn {
-    user-select: none;
+    user-select: none !important;
 }
 
 // header
@@ -402,7 +402,7 @@ header {
     }
 
     .dropdown {
-        // display: none;
+        display: none;
         position: absolute;
         height: auto;
         width: 20rem;
@@ -522,10 +522,10 @@ header {
     }
 
     .mobile-nav-item {
-        display: none;
+        display: none !important;
 
         @media (max-width: 786px) {
-            display: block;
+            display: block !important;
         }
     }
 
@@ -542,6 +542,7 @@ header {
         justify-content: center;
         align-items: center;
         overflow: hidden;
+        display: none;
 
         .nav-main-container {
             position: relative;
@@ -575,6 +576,10 @@ header {
                         background: white;
                         border-radius: .7rem;
                         display: flex;
+                        
+                        &:last-child {
+                            margin-bottom: 1rem;
+                        }
 
                         a {
                             height: 100%;

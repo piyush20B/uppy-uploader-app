@@ -74,9 +74,9 @@ body {
 }
 
 .usn {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  -webkit-user-select: none !important;
+     -moz-user-select: none !important;
+          user-select: none !important;
 }
 
 header {
@@ -375,6 +375,7 @@ header .wrapper .right-cont .your-profile .profile-img-box img {
      object-fit: contain;
 }
 header .dropdown {
+  display: none;
   position: absolute;
   height: auto;
   width: 20rem;
@@ -474,11 +475,11 @@ header .dropdown ul li a .action-name.lout {
   color: var(--profile-logout);
 }
 header .mobile-nav-item {
-  display: none;
+  display: none !important;
 }
 @media (max-width: 786px) {
   header .mobile-nav-item {
-    display: block;
+    display: block !important;
   }
 }
 header .nav-wrapper {
@@ -495,6 +496,7 @@ header .nav-wrapper {
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  display: none;
 }
 header .nav-wrapper .nav-main-container {
   position: relative;
@@ -527,6 +529,9 @@ header .nav-wrapper .nav-main-container nav ul li {
   background: white;
   border-radius: 0.7rem;
   display: flex;
+}
+header .nav-wrapper .nav-main-container nav ul li:last-child {
+  margin-bottom: 1rem;
 }
 header .nav-wrapper .nav-main-container nav ul li a {
   height: 100%;

@@ -210,55 +210,8 @@
     <script src="/static/src/libs/js/popper.min.js"></script>
     <script src="/static/src/libs/js/gsap.min.js"></script>
     <!-- <script src="https://unpkg.com/tippy.js@5/dist/tippy-bundle.iife.js"></script> -->
-    <script>
-        const button = document.querySelector('#profile-dropdown-toggle');
-        const tooltip = document.querySelector('#profile-dropdown');
 
-        const popperInstance = Popper.createPopper(button, tooltip, {
-            placement: 'bottom-start',
-            modifiers: [
-                {
-                    name: 'offset',
-                    options: {
-                        offset: [0, 10],
-                    },
-                }
-            ],
-        });
-
-        $(document).ready(function () {
-            // Set initial state
-            $('#profile-dropdown').attr('isOpen', 'closed').hide();
-
-            function closeDropdown() {
-                $('#profile-dropdown').attr('isOpen', 'closed').stop(true, true).slideUp(300).fadeOut(300);
-            }
-
-            $('.link-profile-nav').click(function () { closeDropdown() });
-
-            // Click event
-            $('#profile-dropdown-toggle').click(function () {
-                popperInstance.update();
-                const isOpen = $('#profile-dropdown').attr('isOpen');
-                if (isOpen === "closed") {
-                    $('#profile-dropdown').attr('isOpen', 'opened').stop(true, true).slideDown(300).fadeIn(300);
-                } else if (isOpen === "opened") {
-                    $('#profile-dropdown').attr('isOpen', 'closed').stop(true, true).slideUp(300).fadeOut(300);
-                }
-            });
-        });
-
-        $('.toggle-menu').click(function () {
-            if ($('.toggle-menu .open-menu').attr('isOpen') === "closed") {
-                $('.toggle-menu .open-menu').addClass('active');
-                $('.toggle-menu .open-menu').attr('isOpen', "opened");
-            } else if ($('.toggle-menu .open-menu').attr('isOpen') === "opened") {
-                $('.toggle-menu .open-menu').removeClass('active');
-                $('.toggle-menu .open-menu').attr('isOpen', "closed");
-            }
-        })
-
-    </script>
+    <script src="/static/src/js/main.js"></script>
 
 
 
