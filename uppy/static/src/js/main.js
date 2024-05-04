@@ -6,10 +6,11 @@
 */
 
 $(document).ready(function () {
+    // initially check the user theme and update it...
+
+    // Profile Dropdown...
     const button = document.querySelector('#profile-dropdown-toggle');
     const tooltip = document.querySelector('#profile-dropdown');
-
-    // Creating Popper instance for header dropdown positioning...
     const popperInstance = Popper.createPopper(button, tooltip, {
         placement: 'bottom-start',
         modifiers: [
@@ -22,28 +23,33 @@ $(document).ready(function () {
         ],
     });
 
-    // Function to close the profile dropdown...
-    function closeDropdown() {
+    function closeProfileDropdown() { // Function to close the profile dropdown...
         $('#profile-dropdown').attr('isOpen', 'closed').stop(true, true).slideUp(300).fadeOut(300);
     }
 
-    // Click event to close dropdown when profile link is clicked...
-    $('.link-profile-nav').click(function () {
-        closeDropdown();
+    $('.link-profile-nav').click(function () { // Click event to close dropdown when profile link is clicked...
+        closeProfileDropdown();
     });
 
-    // Click event to toggle profile dropdown...
-    $('#profile-dropdown-toggle').click(function () {
+    $('#profile-dropdown-toggle').click(function () { // Click event to toggle profile dropdown...
         popperInstance.update(); // Update Popper position...
         const isOpen = $('#profile-dropdown').attr('isOpen');
         if (isOpen === "closed") {
             $('#profile-dropdown').attr('isOpen', 'opened').stop(true, true).slideDown(300).fadeIn(300);
         } else if (isOpen === "opened") {
-            closeDropdown();
+            closeProfileDropdown();
         }
     });
 
-    // Click event to toggle menu...
+    $(document).click(function (event) {
+        if (!$(event.target).closest('#profile-dropdown-toggle, #profile-dropdown').length) {
+            closeProfileDropdown();
+        }
+    });
+
+    $('#profile-dropdown-toggle').blur(() => { closeProfileDropdown() });
+
+    // Toggle Menu...
     $('.toggle-menu').click(function () {
         const openMenu = $('.toggle-menu .open-menu');
         if (openMenu.attr('isOpen') === "closed") {
@@ -78,23 +84,38 @@ $(document).ready(function () {
     });
 
     // Search Function...
-    // Add event listener for form submission...
-    $('#search-form').submit(function (event) {
-        // Prevent default form submission...
-        event.preventDefault();
-
-        // Get the search query from the input field...
-        const searchContent = $('#search-content').val();
-
-        // Redirect to the search URL with the search query...
-        window.location.href = searchUrl + "?query=" + encodeURIComponent(searchContent);
+    $('#search-form').submit(function (event) { // Add event listener for form submission...
+        event.preventDefault(); // Prevent default form submission...
+        const searchContent = $('#search-content').val(); // Get the search query from the input field...
+        window.location.href = searchUrl + "?query=" + encodeURIComponent(searchContent); // Redirect to the search URL with the search query...
+    });
+    $('#search-content').keypress(function (event) { // Add event listener for pressing enter in the input field...
+        if (event.key === 'Enter') {
+            $('#search-form').submit(); // Trigger form submission when enter key is pressed...
+        }
     });
 
-    // Add event listener for pressing enter in the input field...
-    $('#search-content').keypress(function (event) {
-        if (event.key === 'Enter') {
-            // Trigger form submission when enter key is pressed...
-            $('#search-form').submit();
+    // Keyboard Shortcuts...
+    $(document).keydown(function (e) {
+        if (e.ctrlKey && e.key === '/') { // Focus on search input when Ctrl+/ is pressed...
+            $("#search-content").focus();
+            e.preventDefault();
+        }
+        if (e.key === 'Escape') { // Blur search input when Escape key is pressed...
+            $("#search-content").blur();
+            e.preventDefault();
+        }
+    });
+
+    // Focus Class Handling...
+    $("#search-content").focus(function () { // Add focus class when search input is focused...
+        $(".shortcut").addClass("focus");
+    });
+    $("#search-content").blur(function () { // Remove focus class when search input is blurred...
+        if ($(this).val() === '') {
+            $(".shortcut").removeClass("focus");
+        } else {
+            $(".shortcut").addClass("focus");
         }
     });
 });

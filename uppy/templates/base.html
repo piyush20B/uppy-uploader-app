@@ -25,9 +25,11 @@
                 </div>
             </a>
             <div class="searchBarWrapper">
-                <form id="search-form" action="{% url 'search' %}" method="get" style="width: 100%; height: 100%; display: flex;">
+                <form id="search-form" action="{% url 'search' %}" method="get"
+                    style="width: 100%; height: 100%; display: flex;">
                     <div class="searchBar-input">
-                        <input id="search-content" name="search-content" type="text" placeholder="Search Your Files!!" autocomplete="off">
+                        <input id="search-content" name="search-content" type="text" placeholder="Search Your Files!!"
+                            autocomplete="off">
                     </div>
                     <span class="shortcut">
                         <div class="key ls">ctrl</div>
@@ -171,6 +173,12 @@
 
     <!-- Scripts and libraries -->
     <script src="/static/src/libs/js/code.jquery.com_jquery-3.7.0.js"></script>
+    <!-- <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script> -->
+    <!-- tooltips -->
+    <script src="/static/src/libs/js/popper.min.js"></script>
+    <script src="/static/src/libs/js/gsap.min.js"></script>
+    <!-- <script src="https://unpkg.com/tippy.js@5/dist/tippy-bundle.iife.js"></script> -->
 
     <script>
         $('.outer-shell').click(function () {
@@ -186,36 +194,6 @@
         })
         const searchUrl = "{% url 'search' %}";
     </script>
-    <script>
-        $(document).ready(function () {
-            $(document).keydown(function (e) {
-                if (e.ctrlKey && e.key === '/') {
-                    $("#search-content").focus();
-                    e.preventDefault();
-                }
-                if (e.key === 'Escape') {
-                    $("#search-content").blur();
-                    e.preventDefault();
-                }
-            });
-
-            $("#search-content").focus(function () {
-                $(".searchBarWrapper").addClass("focus");
-                $(".shortcut").addClass("focus");
-            });
-
-            $("#search-content").blur(function () {
-                $(".searchBarWrapper").removeClass("focus");
-                $(".shortcut").removeClass("focus");
-            });
-        });
-    </script>
-    <!-- <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script> -->
-    <!-- tooltips -->
-    <script src="/static/src/libs/js/popper.min.js"></script>
-    <script src="/static/src/libs/js/gsap.min.js"></script>
-    <!-- <script src="https://unpkg.com/tippy.js@5/dist/tippy-bundle.iife.js"></script> -->
 
     <script src="/static/src/js/main.js"></script>
 
