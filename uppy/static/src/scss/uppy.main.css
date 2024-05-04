@@ -526,6 +526,8 @@ header .nav-wrapper .nav-main-container nav ul li a {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 2rem;
+  text-decoration: none;
 }
 @media screen and (max-width: 1024px) {
   header .nav-wrapper .nav-main-container nav ul {
