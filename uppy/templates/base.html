@@ -157,7 +157,9 @@
 
     </header>
 
-    <main></main>
+    <main>
+        {% block body %}{% endblock body %}
+    </main>
 
     <footer></footer>
 
@@ -207,7 +209,7 @@
     <!-- tooltips -->
     <script src="/static/src/libs/js/popper.min.js"></script>
     <script src="/static/src/libs/js/gsap.min.js"></script>
-    <!-- <script src="https://unpkg.com/tippy.js@5/dist/tippy-bundle.iife.js"></script> -->.
+    <!-- <script src="https://unpkg.com/tippy.js@5/dist/tippy-bundle.iife.js"></script> -->
     <script>
         const button = document.querySelector('#profile-dropdown-toggle');
         const tooltip = document.querySelector('#profile-dropdown');

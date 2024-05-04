@@ -3,12 +3,12 @@ from django.shortcuts import render
 # Create your views here.
 
 
-def search_ultra(request, query):
-    process = query
+def search_ultra(request):
+    process = request.GET.get('query', '')
     return render(request, 'home/ult-search.html', context={'query': process})
 
-def search(request, query):
-    process = query
+def search(request):
+    process = request.GET.get('query', '')
     return render(request, 'home/search.html', context={'query': process})
 
 def index(request):

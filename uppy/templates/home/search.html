@@ -14,7 +14,11 @@
 
 <body>
 
-    <main></main>
+    <main>
+        {% block body %}
+        {{ query }}
+        {% endblock body %}
+    </main>
     {% block customScripts %}{% endblock customScripts %}
 
 </body>
