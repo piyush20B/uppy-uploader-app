@@ -549,22 +549,22 @@ header {
             background: var(--navigation-bg);
             border-radius: 1rem;
             padding: 1rem;
+            overflow: auto;
+            overflow-x: hidden;
 
             nav {
                 position: relative;
                 height: 100%;
                 width: 100%;
-            
+
                 ul {
                     list-style: none;
                     padding: 0;
                     margin: 0;
-                    overflow: auto;
-                    overflow-x: hidden;
                     display: grid;
                     gap: 1rem;
                     grid-template-columns: repeat(4, 1fr); // Default to 4 columns
-                    
+
                     li {
                         height: 10rem;
                         background: white;
@@ -582,21 +582,21 @@ header {
                         }
                     }
                 }
-            
+
                 @media screen and (max-width: 1024px) {
                     ul {
                         grid-template-columns: repeat(2, 1fr); // 2 columns on tablets
                     }
                 }
-            
+
                 @media screen and (max-width: 600px) {
                     ul {
                         grid-template-columns: repeat(1, 1fr); // 1 column on mobile
                     }
                 }
             }
-            
-            
+
+
         }
     }
 }

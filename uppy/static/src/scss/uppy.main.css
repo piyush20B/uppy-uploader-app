@@ -503,6 +503,8 @@ header .nav-wrapper .nav-main-container {
   background: var(--navigation-bg);
   border-radius: 1rem;
   padding: 1rem;
+  overflow: auto;
+  overflow-x: hidden;
 }
 header .nav-wrapper .nav-main-container nav {
   position: relative;
@@ -513,8 +515,6 @@ header .nav-wrapper .nav-main-container nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  overflow: auto;
-  overflow-x: hidden;
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(4, 1fr);
