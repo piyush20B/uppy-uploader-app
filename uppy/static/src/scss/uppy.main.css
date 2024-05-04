@@ -14,6 +14,7 @@
   --profile-profile: #117ebe;
   --profile-settings: #e2e1e1;
   --profile-logout: #d73232;
+  --navigation-bg: rgba(0, 0, 0, 0.286);
   --z-index-profile-dropdown: 10000000;
   --z-index-navigation: 1000000;
 }
@@ -468,14 +469,6 @@ header .dropdown ul li a .action-name.sett {
 header .dropdown ul li a .action-name.lout {
   color: var(--profile-logout);
 }
-header .nav-wrapper {
-  position: absolute;
-  z-index: var(--z-index-navigation);
-  top: 7rem;
-  height: calc(100vh - 7rem);
-  width: 100%;
-  background: #000;
-}
 header .mobile-nav-item {
   display: none;
 }
@@ -483,4 +476,44 @@ header .mobile-nav-item {
   header .mobile-nav-item {
     display: block;
   }
+}
+header .nav-wrapper {
+  position: absolute;
+  z-index: var(--z-index-navigation);
+  top: 7rem;
+  height: calc(100vh - 7rem);
+  background: var(--navigation-bg);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+header .nav-wrapper .nav-main-container {
+  position: relative;
+  height: 90%;
+  width: 90%;
+  background: var(--navigation-bg);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+header .nav-wrapper .nav-main-container nav {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+header .nav-wrapper .nav-main-container nav ul {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+header .nav-wrapper .nav-main-container nav ul li {
+  height: 10rem;
+  width: calc(25% - 1rem);
+  min-width: calc(25% - 1rem);
+  background: white;
 }/*# sourceMappingURL=uppy.main.css.map */

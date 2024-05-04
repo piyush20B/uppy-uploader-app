@@ -14,6 +14,8 @@
     --profile-profile: #117ebe;
     --profile-settings: #e2e1e1;
     --profile-logout: #d73232;
+    --navigation-bg: rgba(0, 0, 0, 0.286);
+    // z-indices
     --z-index-profile-dropdown: 10000000;
     --z-index-navigation: 1000000;
 }
@@ -513,20 +515,57 @@ header {
         }
     }
 
-    .nav-wrapper {
-        position: absolute;
-        z-index: var(--z-index-navigation);
-        top: 7rem;
-        height: calc(100vh - 7rem);
-        width: 100%;
-        background: #000;
-    }
-
     .mobile-nav-item {
         display: none;
 
         @media (max-width: 786px) {
             display: block;
+        }
+    }
+
+    .nav-wrapper {
+        position: absolute;
+        z-index: var(--z-index-navigation);
+        top: 7rem;
+        height: calc(100vh - 7rem);
+        background: var(--navigation-bg);
+        backdrop-filter: blur(20px);
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+
+        .nav-main-container {
+            position: relative;
+            height: 90%;
+            width: 90%;
+            background: var(--navigation-bg);
+            border-radius: 1rem;
+            padding: 1rem;
+
+            nav {
+                position: relative;
+                height: 100%;
+                width: 100%;
+
+                ul {
+                    position: relative;
+                    width: 100%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 1rem;
+
+                    li {
+
+                        height: 10rem;
+                        width: calc(25% - 1rem);
+                        min-width: calc(25% - 1rem);
+                        background: white;
+
+                    }
+                }
+            }
         }
     }
 }
