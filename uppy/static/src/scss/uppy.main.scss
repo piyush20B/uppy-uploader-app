@@ -96,6 +96,12 @@ header {
     align-items: center;
     border-bottom-left-radius: 1.5rem;
     border-bottom-right-radius: 1.5rem;
+    transition: .5s ease;
+
+    &.active {
+        border-bottom-left-radius: 0rem;
+        border-bottom-right-radius: 0rem;
+    }
 
     .wrapper {
         position: relative;

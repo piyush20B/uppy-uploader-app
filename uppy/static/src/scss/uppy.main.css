@@ -88,6 +88,11 @@ header {
   align-items: center;
   border-bottom-left-radius: 1.5rem;
   border-bottom-right-radius: 1.5rem;
+  transition: 0.5s ease;
+}
+header.active {
+  border-bottom-left-radius: 0rem;
+  border-bottom-right-radius: 0rem;
 }
 header .wrapper {
   position: relative;
