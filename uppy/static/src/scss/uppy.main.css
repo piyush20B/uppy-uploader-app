@@ -375,7 +375,6 @@ header .wrapper .right-cont .your-profile .profile-img-box img {
      object-fit: contain;
 }
 header .dropdown {
-  display: none;
   position: absolute;
   height: auto;
   width: 20rem;

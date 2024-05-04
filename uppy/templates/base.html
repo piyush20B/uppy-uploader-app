@@ -96,7 +96,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="prfle link-profile-nav">
+                    <a href="/profile/piyush20" class="prfle link-profile-nav">
                         <div class="icon-action prfle">
                             <i class="bi bi-person-fill"></i>
                         </div>
@@ -104,7 +104,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="sett link-profile-nav">
+                    <a href="/settings" class="sett link-profile-nav">
                         <div class="icon-action sett">
                             <i class="bi bi-gear-wide-connected"></i>
                         </div>
@@ -113,7 +113,7 @@
                 </li>
                 <hr>
                 <li>
-                    <a href="#" class="lout link-profile-nav">
+                    <a href="{% url 'logout' %}" class="lout link-profile-nav">
                         <div class="icon-action lout">
                             <i class="bi bi-box-arrow-right"></i>
                         </div>
@@ -214,7 +214,7 @@
         const button = document.querySelector('#profile-dropdown-toggle');
         const tooltip = document.querySelector('#profile-dropdown');
 
-        Popper.createPopper(button, tooltip, {
+        const popperInstance = Popper.createPopper(button, tooltip, {
             placement: 'bottom-start',
             modifiers: [
                 {
@@ -238,6 +238,7 @@
 
             // Click event
             $('#profile-dropdown-toggle').click(function () {
+                popperInstance.update();
                 const isOpen = $('#profile-dropdown').attr('isOpen');
                 if (isOpen === "closed") {
                     $('#profile-dropdown').attr('isOpen', 'opened').stop(true, true).slideDown(300).fadeIn(300);
