@@ -94,7 +94,6 @@ header {
     background: var(--bg-header);
     display: flex;
     align-items: center;
-    padding: 2px;
     border-bottom-left-radius: 1.5rem;
     border-bottom-right-radius: 1.5rem;
 
@@ -524,9 +523,10 @@ header {
     }
 
     .nav-wrapper {
-        position: absolute;
+        position: fixed;
         z-index: var(--z-index-navigation);
         top: 7rem;
+        left: 0;
         height: calc(100vh - 7rem);
         background: var(--navigation-bg);
         backdrop-filter: blur(20px);
@@ -548,24 +548,47 @@ header {
                 position: relative;
                 height: 100%;
                 width: 100%;
-
+            
                 ul {
-                    position: relative;
-                    width: 100%;
-                    display: flex;
-                    flex-wrap: wrap;
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+                    overflow: auto;
+                    overflow-x: hidden;
+                    display: grid;
                     gap: 1rem;
-
+                    grid-template-columns: repeat(4, 1fr); // Default to 4 columns
+                    
                     li {
-
                         height: 10rem;
-                        width: calc(25% - 1rem);
-                        min-width: calc(25% - 1rem);
                         background: white;
+                        border-radius: .7rem;
+                        display: flex;
 
+                        a {
+                            height: 100%;
+                            width: 100%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                        }
+                    }
+                }
+            
+                @media screen and (max-width: 1024px) {
+                    ul {
+                        grid-template-columns: repeat(2, 1fr); // 2 columns on tablets
+                    }
+                }
+            
+                @media screen and (max-width: 600px) {
+                    ul {
+                        grid-template-columns: repeat(1, 1fr); // 1 column on mobile
                     }
                 }
             }
+            
+            
         }
     }
 }
