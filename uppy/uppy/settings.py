@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'usages.apps.UsagesConfig',
     'uploads.apps.UploadsConfig',
     'chat.apps.ChatConfig',
+    'blogs.apps.BlogsConfig',
     'terms.apps.TermsConfig',
 ]
 
