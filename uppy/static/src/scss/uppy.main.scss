@@ -14,6 +14,7 @@
     --profile-profile: #117ebe;
     --profile-settings: #e2e1e1;
     --profile-logout: #d73232;
+    --nav-link-hover: #2a666a47;
     --navigation-bg: rgba(0, 0, 0, 0.286);
     // z-indices
     --z-index-profile-dropdown: 10000000;
@@ -33,6 +34,7 @@
     --profile-profile: #61c5ff;
     --profile-settings: #c3c3c3;
     --profile-logout: #fc7171;
+    --nav-link-hover: #bddb9847;
 }
 
 // importing custom fonts
@@ -594,13 +596,11 @@ header {
 
                     li {
                         height: 10rem;
-                        background: white;
+                        background: var(--bg-base);
+                        border: 1px solid var(--bg-base-1);
                         border-radius: .7rem;
                         display: flex;
-
-                        &:last-child {
-                            margin-bottom: 1rem;
-                        }
+                        overflow: hidden;
 
                         a {
                             height: 100%;
@@ -610,7 +610,41 @@ header {
                             align-items: center;
                             font-size: 2rem;
                             text-decoration: none;
+                            color: var(--bg-base-1);
+
+                            &:active {
+                                transition: 0s;
+                                filter: brightness(1.2);
+                            }
+
+                            &::before {
+                                content: '';
+                                position: absolute;
+                                left: var(--x);
+                                top: var(--y);
+                                transform: translate(-50%, -50%);
+                                background: radial-gradient(var(--nav-link-hover), transparent, transparent);
+                                height: 700px;
+                                width: 700px;
+                                opacity: 0;
+                                transition: .5s, top 0s, left 0s;
+                            }
+
+                            &::after {
+                                content: '';
+                                position: absolute;
+                                inset: 2px;
+                            }
+
+                            &:hover::before {
+                                opacity: 1;
+                            }
+
+                            &:last-child {
+                                margin-bottom: 1rem;
+                            }
                         }
+
                     }
                 }
 

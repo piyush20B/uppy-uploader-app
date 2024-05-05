@@ -83,6 +83,14 @@ $(document).ready(function () {
         }
     });
 
+    //menu items hover effects...
+    $(".nav-item").on('mousemove', function(e) {
+        $(this).css({
+            '--x': e.pageX - $(this).offset().left + 'px',
+            '--y': e.pageY - $(this).offset().top + 'px'
+        });
+    });
+
     // Search Function...
     $('#search-form').submit(function (event) { // Add event listener for form submission...
         event.preventDefault(); // Prevent default form submission...

@@ -14,6 +14,7 @@
   --profile-profile: #117ebe;
   --profile-settings: #e2e1e1;
   --profile-logout: #d73232;
+  --nav-link-hover: #2a666a47;
   --navigation-bg: rgba(0, 0, 0, 0.286);
   --z-index-profile-dropdown: 10000000;
   --z-index-navigation: 1000000;
@@ -32,6 +33,7 @@
   --profile-profile: #61c5ff;
   --profile-settings: #c3c3c3;
   --profile-logout: #fc7171;
+  --nav-link-hover: #bddb9847;
 }
 
 @font-face {
@@ -548,12 +550,11 @@ header .nav-wrapper .nav-main-container nav ul {
 }
 header .nav-wrapper .nav-main-container nav ul li {
   height: 10rem;
-  background: white;
+  background: var(--bg-base);
+  border: 1px solid var(--bg-base-1);
   border-radius: 0.7rem;
   display: flex;
-}
-header .nav-wrapper .nav-main-container nav ul li:last-child {
-  margin-bottom: 1rem;
+  overflow: hidden;
 }
 header .nav-wrapper .nav-main-container nav ul li a {
   height: 100%;
@@ -563,6 +564,34 @@ header .nav-wrapper .nav-main-container nav ul li a {
   align-items: center;
   font-size: 2rem;
   text-decoration: none;
+  color: var(--bg-base-1);
+}
+header .nav-wrapper .nav-main-container nav ul li a:active {
+  transition: 0s;
+  filter: brightness(1.2);
+}
+header .nav-wrapper .nav-main-container nav ul li a::before {
+  content: "";
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  transform: translate(-50%, -50%);
+  background: radial-gradient(var(--nav-link-hover), transparent, transparent);
+  height: 700px;
+  width: 700px;
+  opacity: 0;
+  transition: 0.5s, top 0s, left 0s;
+}
+header .nav-wrapper .nav-main-container nav ul li a::after {
+  content: "";
+  position: absolute;
+  inset: 2px;
+}
+header .nav-wrapper .nav-main-container nav ul li a:hover::before {
+  opacity: 1;
+}
+header .nav-wrapper .nav-main-container nav ul li a:last-child {
+  margin-bottom: 1rem;
 }
 @media screen and (max-width: 1024px) {
   header .nav-wrapper .nav-main-container nav ul {
