@@ -602,4 +602,10 @@ header .nav-wrapper .nav-main-container nav ul li a:last-child {
   header .nav-wrapper .nav-main-container nav ul {
     grid-template-columns: repeat(1, 1fr);
   }
+}
+
+footer {
+  position: relative;
+  z-index: 0;
+  padding: 1rem;
 }/*# sourceMappingURL=uppy.main.css.map */
