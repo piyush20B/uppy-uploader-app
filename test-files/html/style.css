@@ -1,3 +1,7 @@
+:root {
+  --lang: ;
+}
+
 body {
   display: flex;
   justify-content: center;
@@ -8,7 +12,7 @@ body {
   position: relative;
   height: 5rem;
   width: var(--w);
-  background: white;
+  background: #d9d9d9;
   border-radius: 1rem;
   display: flex;
   justify-content: center;
@@ -53,7 +57,7 @@ body {
 .languages .wrapper .vr {
   height: 5rem;
   width: 0.3rem;
-  background: var(--bg-base-1);
+  background: #a6ad8f;
   margin-right: 0.8rem;
 }
 .languages .wrapper .lang-rhs {
@@ -67,4 +71,11 @@ body {
 .languages .wrapper .lang-rhs .lang-svg-chevron svg {
   height: 100%;
   width: 100%;
+  transition: 0.5s;
+}
+.languages .wrapper .lang-rhs .lang-svg-chevron svg.active {
+  transform: rotate(180deg);
+}
+.languages .wrapper .lang-rhs .lang-svg-chevron svg path {
+  stroke: #a6ad8f;
 }/*# sourceMappingURL=style.css.map */

@@ -1,3 +1,7 @@
+:root {
+    --lang:
+}
+
 body {
     display: flex;
     justify-content: center;
@@ -8,7 +12,7 @@ body {
     position: relative;
     height: 5rem;
     width: var(--w);
-    background: white;
+    background: #d9d9d9;
     border-radius: 1rem;
     display: flex;
     justify-content: center;
@@ -56,7 +60,7 @@ body {
         .vr {
             height: 5rem;
             width: .3rem;
-            background: var(--bg-base-1);
+            background: #a6ad8f;
             margin-right: .8rem;
         }
 
@@ -71,8 +75,19 @@ body {
                 svg {
                     height: 100%;
                     width: 100%;
+                    transition: .5s;
+                    
+                    &.active {
+                        transform: rotate(180deg);
+                    }
+
+                    path {
+                        stroke: #a6ad8f;
+                    }
                 }
             }
         }
     }
 }
+
+
