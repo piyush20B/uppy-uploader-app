@@ -27,7 +27,7 @@ body {
 .languages .wrapper .lang-lhs {
   position: relative;
   height: 100%;
-  width: calc(70% - 0.3rem);
+  width: calc(80% - 0.3rem);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -42,6 +42,14 @@ body {
   -o-object-fit: contain;
      object-fit: contain;
 }
+.languages .wrapper .lang-lhs p {
+  width: calc(100% - 5.5rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
 .languages .wrapper .vr {
   height: 5rem;
   width: 0.3rem;
@@ -49,5 +57,9 @@ body {
 }
 .languages .wrapper .lang-rhs {
   height: 100%;
-  width: calc(30% - 0.3rem);
+  width: calc(20% - 0.3rem);
+}
+.languages .wrapper .lang-rhs .lang-svg-chevron {
+  height: 100%;
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */

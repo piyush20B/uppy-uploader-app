@@ -27,7 +27,7 @@ body {
         .lang-lhs {
             position: relative;
             height: 100%;
-            width: calc(70% - .3rem);
+            width: calc(80% - .3rem);
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -42,6 +42,15 @@ body {
                     object-fit: contain;
                 }
             }
+
+            p {
+                width: calc(100% - 5.5rem);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 1.5rem;
+                font-weight: 600;
+            }
         }
 
         .vr {
@@ -52,7 +61,16 @@ body {
 
         .lang-rhs {
             height: 100%;
-            width: calc(30% - .3rem);
+            width: calc(20% - .3rem);
+
+            .lang-svg-chevron {
+                height: 100%;
+                width: 100%;
+
+                svg {
+                    
+                }
+            }
         }
     }
 }
