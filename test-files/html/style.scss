@@ -1,0 +1,58 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.languages {
+    position: relative;
+    height: 5rem;
+    width: var(--w);
+    background: white;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.8rem;
+    cursor: pointer;
+
+    .wrapper {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .lang-lhs {
+            position: relative;
+            height: 100%;
+            width: calc(70% - .3rem);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .flag-lang {
+                position: relative;
+                height: auto;
+                width: 4.8rem;
+
+                img {
+                    width: 100%;
+                    object-fit: contain;
+                }
+            }
+        }
+
+        .vr {
+            height: 5rem;
+            width: .3rem;
+            background: var(--bg-base-1);
+        }
+
+        .lang-rhs {
+            height: 100%;
+            width: calc(30% - .3rem);
+        }
+    }
+}
