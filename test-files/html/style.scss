@@ -57,6 +57,7 @@ body {
             height: 5rem;
             width: .3rem;
             background: var(--bg-base-1);
+            margin-right: .8rem;
         }
 
         .lang-rhs {
@@ -68,7 +69,8 @@ body {
                 width: 100%;
 
                 svg {
-                    
+                    height: 100%;
+                    width: 100%;
                 }
             }
         }
