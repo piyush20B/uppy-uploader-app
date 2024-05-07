@@ -78,4 +78,49 @@ body {
 }
 .languages .wrapper .lang-rhs .lang-svg-chevron svg path {
   stroke: #a6ad8f;
+}
+
+.options-lang {
+  position: absolute;
+  top: calc(100% + 0.8rem);
+  left: 0;
+  width: 100%;
+  background: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  display: none;
+}
+.options-lang.active {
+  display: block;
+}
+.options-lang ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.options-lang ul li {
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.options-lang ul li:hover {
+  background: #f0f0f0;
+}
+.options-lang ul li .lang-lhs {
+  display: flex;
+  align-items: center;
+}
+.options-lang ul li .lang-lhs .flag-lang {
+  width: 3rem;
+  margin-right: 1rem;
+}
+.options-lang ul li .lang-lhs .flag-lang img {
+  width: 100%;
+  height: auto;
+}
+.options-lang ul li .lang-lhs .lang-name {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 0;
 }/*# sourceMappingURL=style.css.map */
