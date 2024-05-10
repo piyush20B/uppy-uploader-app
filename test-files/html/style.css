@@ -1,7 +1,19 @@
+:root {
+  --clr-stroke: #a6ad8f;
+}
+
+[data-uppy-theme=dark] {
+  --clr-stroke: #6a9396;
+}
+
 body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.icon-sm {
+  scale: 0.8;
 }
 
 .languages {
@@ -53,7 +65,7 @@ body {
 .languages .wrapper .vr {
   height: 5rem;
   width: 0.3rem;
-  background: #a6ad8f;
+  background: var(--clr-stroke);
   margin-right: 0.8rem;
 }
 .languages .wrapper .lang-rhs {
@@ -73,50 +85,13 @@ body {
   transform: rotate(180deg);
 }
 .languages .wrapper .lang-rhs .lang-svg-chevron svg path {
-  stroke: #a6ad8f;
+  stroke: var(--clr-stroke);
 }
-
-.options-lang {
-  position: absolute;
-  top: calc(100% + 0.8rem);
+.languages .options-lang {
+  position: fixed;
   left: 0;
+  top: 0;
+  height: 100vh;
   width: 100%;
-  background: #fff;
-  border-radius: 0.5rem;
-  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.2);
-  z-index: 1000;
-  display: none;
-}
-.options-lang.active {
-  display: block;
-}
-.options-lang ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.options-lang ul li {
-  padding: 0.5rem;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-.options-lang ul li:hover {
-  background: #f0f0f0;
-}
-.options-lang ul li .lang-lhs {
-  display: flex;
-  align-items: center;
-}
-.options-lang ul li .lang-lhs .flag-lang {
-  width: 3rem;
-  margin-right: 1rem;
-}
-.options-lang ul li .lang-lhs .flag-lang img {
-  width: 100%;
-  height: auto;
-}
-.options-lang ul li .lang-lhs .lang-name {
-  font-size: 1.2rem;
-  font-weight: 500;
-  margin: 0;
+  z-index: var(--z-index-navigation);
 }/*# sourceMappingURL=style.css.map */

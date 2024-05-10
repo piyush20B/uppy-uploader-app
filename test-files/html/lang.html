@@ -15,42 +15,60 @@
         <div class="wrapper">
             <div class="lang-lhs">
                 <div class="flag-lang">
-                    <img src="/uppy/static/assets/flags/br.png" alt="india">
+                    <img src="/uppy/static/assets/flags/in.png" alt="india">
                 </div>
                 <p class="lang-name">en-IN</p>
             </div>
             <div class="vr"></div>
             <div class="lang-rhs">
                 <div class="lang-svg-chevron">
-                    <svg xmlns="http://www.w3.org/2000/svg" id="lang-dropdown-chevron" viewBox="0 0 512 512">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon-sm" viewBox="0 0 512 512">
                         <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                            stroke-width="48" d="M112 184l144 144 144-144" />
+                            stroke-width="32"
+                            d="M48 112h288M192 64v48M272 448l96-224 96 224M301.5 384h133M281.3 112S257 206 199 277 80 384 80 384" />
+                        <path d="M256 336s-35-27-72-75-56-85-56-85" fill="none" stroke="currentColor"
+                            stroke-linecap="round" stroke-linejoin="round" stroke-width="32" />
                     </svg>
                 </div>
             </div>
         </div>
-        
 
-        <div class="options-lang" id="options-lang">
-            <ul>
-                <li>
-                    <div class="lang-lhs">
-                        <div class="flag-lang">
-                            <img src="/uppy/static/assets/flags/br.png" alt="india">
-                        </div>
-                        <p class="lang-name">en-IN</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="lang-lhs">
-                        <div class="flag-lang">
-                            <img src="/uppy/static/assets/flags/br.png" alt="india">
-                        </div>
-                        <p class="lang-name">en-IN</p>
-                    </div>
-                </li>
-            </ul>
+        <div class="nav-wrapper">
+            <div class="nav-main-container">
+                <nav>
+                    <ul>
+                        <li class="nav-item">
+                            <a href="/about">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/favourites">Favourites</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/upload">Your Uploads</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/upload/file">Upload File</a>
+                        </li>
+                        <li class="nav-item mobile-nav-item">
+                            <a href="/search?query=file">Search</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/chat">Chat</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/contact">Contact Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{% url 'blogs' %}">Blogs and Communities</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/about">About Project</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </div>
+
     </div>
 
     <script src="/uppy/static/src/libs/js/code.jquery.com_jquery-3.7.0.js"></script>

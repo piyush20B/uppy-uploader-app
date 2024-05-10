@@ -1,11 +1,18 @@
 :root{
     --clr-stroke: #a6ad8f;
 }
+[data-uppy-theme="dark"] {
+    --clr-stroke: #6a9396;
+}
 
 body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.icon-sm {
+    scale: 0.8;
 }
 
 .languages {
@@ -88,58 +95,14 @@ body {
             }
         }
     }
-}
 
-
-.options-lang {
-    position: absolute;
-    top: calc(100% + 0.8rem);
-    left: 0;
-    width: 100%;
-    background: #fff;
-    border-radius: 0.5rem;
-    box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-    display: none; // Initially hide the options
-
-    &.active {
-        display: block;
-    }
-
-    ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-
-        li {
-            padding: 0.5rem;
-            cursor: pointer;
-            transition: background 0.3s;
-
-            &:hover {
-                background: #f0f0f0;
-            }
-
-            .lang-lhs {
-                display: flex;
-                align-items: center;
-
-                .flag-lang {
-                    width: 3rem; // Adjust flag size
-                    margin-right: 1rem; // Adjust margin as needed
-
-                    img {
-                        width: 100%;
-                        height: auto;
-                    }
-                }
-
-                .lang-name {
-                    font-size: 1.2rem;
-                    font-weight: 500;
-                    margin: 0;
-                }
-            }
-        }
+    .options-lang {
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100vh;
+        width: 100%;
+        z-index: var(--z-index-navigation);
+        
     }
 }
