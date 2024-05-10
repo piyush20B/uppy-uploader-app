@@ -1,5 +1,5 @@
 :root,
-[data-uppy-theme=light] {
+[data-uppy-theme="light"] {
   --bg-base: #bddb98;
   --bg-base-1: #2a666a;
   --bg-header: #96a07b;
@@ -20,7 +20,7 @@
   --z-index-navigation: 1000000;
 }
 
-[data-uppy-theme=dark] {
+[data-uppy-theme="dark"] {
   --bg-base: #2a666a;
   --bg-base-1: #bddb98;
   --bg-header: #8eaeb0;

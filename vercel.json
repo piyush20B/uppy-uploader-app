@@ -1,8 +1,0 @@
-{
-    "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "uppy/uppy/wsgi.py"
-        }
-    ]
-}

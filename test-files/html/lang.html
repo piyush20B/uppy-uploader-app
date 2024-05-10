@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body data-uppy-theme="dark">
 
     <div class="languages" style="--w: 24rem;" id="languages-select">
         <div class="wrapper">
@@ -29,113 +29,10 @@
                 </div>
             </div>
         </div>
+        
 
         <div class="options-lang" id="options-lang">
             <ul>
-                <li>
-                    <div class="lang-lhs">
-                        <div class="flag-lang">
-                            <img src="/uppy/static/assets/flags/br.png" alt="india">
-                        </div>
-                        <p class="lang-name">en-IN</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="lang-lhs">
-                        <div class="flag-lang">
-                            <img src="/uppy/static/assets/flags/br.png" alt="india">
-                        </div>
-                        <p class="lang-name">en-IN</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="lang-lhs">
-                        <div class="flag-lang">
-                            <img src="/uppy/static/assets/flags/br.png" alt="india">
-                        </div>
-                        <p class="lang-name">en-IN</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="lang-lhs">
-                        <div class="flag-lang">
-                            <img src="/uppy/static/assets/flags/br.png" alt="india">
-                        </div>
-                        <p class="lang-name">en-IN</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="lang-lhs">
-                        <div class="flag-lang">
-                            <img src="/uppy/static/assets/flags/br.png" alt="india">
-                        </div>
-                        <p class="lang-name">en-IN</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="lang-lhs">
-                        <div class="flag-lang">
-                            <img src="/uppy/static/assets/flags/br.png" alt="india">
-                        </div>
-                        <p class="lang-name">en-IN</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="lang-lhs">
-                        <div class="flag-lang">
-                            <img src="/uppy/static/assets/flags/br.png" alt="india">
-                        </div>
-                        <p class="lang-name">en-IN</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="lang-lhs">
-                        <div class="flag-lang">
-                            <img src="/uppy/static/assets/flags/br.png" alt="india">
-                        </div>
-                        <p class="lang-name">en-IN</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="lang-lhs">
-                        <div class="flag-lang">
-                            <img src="/uppy/static/assets/flags/br.png" alt="india">
-                        </div>
-                        <p class="lang-name">en-IN</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="lang-lhs">
-                        <div class="flag-lang">
-                            <img src="/uppy/static/assets/flags/br.png" alt="india">
-                        </div>
-                        <p class="lang-name">en-IN</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="lang-lhs">
-                        <div class="flag-lang">
-                            <img src="/uppy/static/assets/flags/br.png" alt="india">
-                        </div>
-                        <p class="lang-name">en-IN</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="lang-lhs">
-                        <div class="flag-lang">
-                            <img src="/uppy/static/assets/flags/br.png" alt="india">
-                        </div>
-                        <p class="lang-name">en-IN</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="lang-lhs">
-                        <div class="flag-lang">
-                            <img src="/uppy/static/assets/flags/br.png" alt="india">
-                        </div>
-                        <p class="lang-name">en-IN</p>
-                    </div>
-                </li>
                 <li>
                     <div class="lang-lhs">
                         <div class="flag-lang">
@@ -159,41 +56,6 @@
     <script src="/uppy/static/src/libs/js/code.jquery.com_jquery-3.7.0.js"></script>
     <script src="/uppy/static/src/libs/js/popper.min.js"></script>
 
-    <script>
-        $(document).ready(function () {
-            const lang_dropdown = document.querySelector('#languages-select');
-            const lang_options = document.querySelector('.options-lang');
-            const chevron_icon = document.querySelector('#lang-dropdown-chevron');
-
-            // Initialize Popper.js for positioning the options list
-            const popperInstance = Popper.createPopper(lang_dropdown, lang_options, {
-                placement: 'bottom-start',
-                modifiers: [
-                    {
-                        name: 'offset',
-                        options: {
-                            offset: [0, 10],
-                        },
-                    }
-                ],
-            });
-
-            // Toggle visibility of options list and rotate chevron icon
-            lang_dropdown.addEventListener('click', function () {
-                lang_options.classList.toggle('active');
-                chevron_icon.classList.toggle('active');
-            });
-
-            // Close options list when clicking outside of it
-            document.addEventListener('click', function (event) {
-                if (!lang_dropdown.contains(event.target) && !lang_options.contains(event.target)) {
-                    lang_options.classList.remove('active');
-                    chevron_icon.classList.remove('active');
-                }
-            });
-        });
-
-    </script>
 
 </body>
 

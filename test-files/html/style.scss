@@ -1,5 +1,5 @@
-:root {
-    --lang:
+:root{
+    --clr-stroke: #a6ad8f;
 }
 
 body {
@@ -60,7 +60,7 @@ body {
         .vr {
             height: 5rem;
             width: .3rem;
-            background: #a6ad8f;
+            background: var(--clr-stroke);
             margin-right: .8rem;
         }
 
@@ -82,7 +82,7 @@ body {
                     }
 
                     path {
-                        stroke: #a6ad8f;
+                        stroke: var(--clr-stroke);
                     }
                 }
             }
