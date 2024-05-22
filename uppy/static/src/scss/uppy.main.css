@@ -81,6 +81,19 @@ body {
           user-select: none !important;
 }
 
+.scroll-beautiful::-webkit-scrollbar {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  width: 7px;
+}
+
+.scroll-beautiful::-webkit-scrollbar-thumb {
+  width: 100%;
+  border-radius: 1rem;
+  background: var(--bg-header-footer);
+}
+
 header {
   position: sticky;
   width: 100%;
@@ -610,4 +623,52 @@ footer.footer_uppy {
   z-index: 0;
   padding: 1rem;
   background: var(--bg-header-footer);
+  transition: 0.5s ease;
+}
+footer.footer_uppy .upperFooter {
+  min-height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer.footer_uppy .upperFooter .footer-content-wrapper {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+footer.footer_uppy .upperFooter .footer-content-wrapper .footer-sections {
+  height: 100%;
+  min-width: 40%;
+  max-width: 45%;
+}
+footer.footer_uppy .upperFooter .footer-content-wrapper .footer-sections.footer-lhs .logoFooter {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer.footer_uppy .upperFooter .footer-content-wrapper .footer-sections.footer-lhs .logoFooter img {
+  height: 4rem;
+  width: 4rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+footer.footer_uppy .upperFooter {
+  min-height: 10%;
+}
+
+.goog-te-combo {
+  height: 3rem;
+  width: 15rem;
+  border-radius: 0.7rem;
+  background: var(--bg-base);
+  color: var(--bg-base-1);
+  font-size: 1.5rem;
+  border: 1px solid var(--bg-base-1);
 }/*# sourceMappingURL=uppy.main.css.map */
