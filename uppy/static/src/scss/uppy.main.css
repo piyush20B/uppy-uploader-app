@@ -1,8 +1,8 @@
 :root,
-[data-uppy-theme="light"] {
+[data-uppy-theme=light] {
   --bg-base: #bddb98;
   --bg-base-1: #2a666a;
-  --bg-header: #96a07b;
+  --bg-header-footer: #96a07b;
   --base-clr-01: #006c66;
   --bg-search-input: #d9d9d9;
   --shortcut-bg: #363636;
@@ -20,10 +20,10 @@
   --z-index-navigation: 1000000;
 }
 
-[data-uppy-theme="dark"] {
+[data-uppy-theme=dark] {
   --bg-base: #2a666a;
   --bg-base-1: #bddb98;
-  --bg-header: #8eaeb0;
+  --bg-header-footer: #8eaeb0;
   --bg-search-input: #adc2c3;
   --shortcut-bg: #6e6e6e;
   --shortcut-key-clr: white;
@@ -85,7 +85,7 @@ header {
   position: sticky;
   width: 100%;
   height: 7rem;
-  background: var(--bg-header);
+  background: var(--bg-header-footer);
   display: flex;
   align-items: center;
   border-bottom-left-radius: 1.5rem;
@@ -254,7 +254,7 @@ header .wrapper .searchBarWrapper .search-btn button[type=submit] {
 }
 header .wrapper .searchBarWrapper .search-btn button[type=submit]:active {
   transition: 0s;
-  background: var(--bg-header);
+  background: var(--bg-header-footer);
 }
 header .wrapper .right-header-panel {
   position: relative;
@@ -604,8 +604,10 @@ header .nav-wrapper .nav-main-container nav ul li a:last-child {
   }
 }
 
-footer {
+footer.footer_uppy {
   position: relative;
+  min-height: 50vh;
   z-index: 0;
   padding: 1rem;
+  background: var(--bg-header-footer);
 }/*# sourceMappingURL=uppy.main.css.map */

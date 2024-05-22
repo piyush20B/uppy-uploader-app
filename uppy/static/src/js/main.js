@@ -111,8 +111,12 @@ $(document).ready(function () {
 
     // Keyboard Shortcuts...
     $(document).keydown(function (e) {
-        // Focus on search input when Ctrl+/ is pressed...
+        // Focus on search input when Ctrl+/ or Ctrl+k is pressed...
         if (e.ctrlKey && e.key === '/') {
+            $("#search-content").focus();
+            e.preventDefault();
+        }
+        else if (e.ctrlKey && e.key === 'k') {
             $("#search-content").focus();
             e.preventDefault();
         }

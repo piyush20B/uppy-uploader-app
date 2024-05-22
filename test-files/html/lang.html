@@ -1,44 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Language-selection</title>
-    <link rel="stylesheet" href="/uppy/static/src/scss/uppy.main.css">
-    <link rel="stylesheet" href="style.css">
+    <title>How To Add Google Translate Button On Your Webpage?</title>
+    <style>
+        /* Your CSS styles go here */
+    </style>
 </head>
 
-<body data-uppy-theme="dark">
+<body>
+    <p>Hello everyone!</p>
+    <p>Welcome to GeeksforGeeks</p>
 
-    <div class="languages" style="--w: 24rem;" id="languages-select">
-        <div class="wrapper">
-            <div class="lang-lhs">
-                <div class="flag-lang">
-                    <img src="/uppy/static/assets/flags/in.png" alt="india">
-                </div>
-                <p class="lang-name">en-IN</p>
-            </div>
-            <div class="vr"></div>
-            <div class="lang-rhs">
-                <div class="lang-svg-chevron">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon-sm" viewBox="0 0 512 512">
-                        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                            stroke-width="32"
-                            d="M48 112h288M192 64v48M272 448l96-224 96 224M301.5 384h133M281.3 112S257 206 199 277 80 384 80 384" />
-                        <path d="M256 336s-35-27-72-75-56-85-56-85" fill="none" stroke="currentColor"
-                            stroke-linecap="round" stroke-linejoin="round" stroke-width="32" />
-                    </svg>
-                </div>
-            </div>
-        </div>
+    <p>
+        Translate this page in your preferred language:
+    </p>
 
-    </div>
+    <div id="google_translate_element"></div>
 
-    <script src="/uppy/static/src/libs/js/code.jquery.com_jquery-3.7.0.js"></script>
-    <script src="/uppy/static/src/libs/js/popper.min.js"></script>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en'
+            }, 'google_translate_element');
+        }
+    </script>
 
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
+    <p>
+        You can translate the content of this page by selecting a language in the select box.
+    </p>
 </body>
 
 </html>

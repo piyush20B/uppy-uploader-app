@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Uppy | {% block title %}{% endblock title %} </title>
+    <title class="notranslate">Uppy | {% block title %}{% endblock title %} </title>
     <link rel="shortcut icon" href="/static/src/brand/uppy-main.png" type="image/x-icon">
     <link rel="stylesheet" href="/static/src/scss/uppy.main.css">
     <link rel="stylesheet" href="/static/src/libs/css/uppy-bs-icons.css">
@@ -19,7 +19,7 @@
                     <div class="brand-logo">
                         <img src="/static/src/brand/uppy-main.png" alt="Uppy">
                     </div>
-                    <div class="brand-name">
+                    <div class="brand-name notranslate">
                         Uppy
                     </div>
                 </div>
@@ -167,20 +167,25 @@
     </header>
 
     <main>
-        {% block body %}{% endblock body %}
+        {% block body %}
+            I an the best ...
+            I will be the best.
+        {% endblock body %}
     </main>
 
-    <footer style="display: none;">
+    <footer style="footer_uppy">
         <section class="upperFooter">
             <div class="footer-content-wrapper">
                 <div class="footer-lhs">
                     <div class="logoFooter">
                         <img src="/static/src/brand/uppy-main.png" alt="">
-                        <h3>Uppy</h3>
+                        <h3 class="notranslate">Uppy</h3>
                     </div>
                     <div class="infoFooter">
                         <p>
-                            Uppy is a platform where you can eaisly upload files. It's build using Django project and Advance Javascript, making fast and reliable. Whether you're sharing any type of documents or photos, Uppy simplifies the process, giving you a smooth and hassle-free experience.
+                            Uppy is a platform where you can eaisly upload files. It's build using Django project and
+                            Advance Javascript, making fast and reliable. Whether you're sharing any type of documents
+                            or photos, Uppy simplifies the process, giving you a smooth and hassle-free experience.
                         </p>
                     </div>
                 </div>
@@ -199,29 +204,11 @@
                         <li>
                             <a href="#">Terms and Conditions</a>
                         </li>
+                        <li>
+                            <span>Language</span>
+                            <div id="google_translate_element"></div>
+                        </li>
                     </ul>
-
-                    <div class="language-select">
-                        <p>Language:</p>
-                        <div class="selection-lang">
-                            <div class="main-lang-outer">
-                                <div class="wrapper-lang">
-                                    <div class="flag">
-                                        <img src="#" alt="country">
-                                    </div>
-                                    <div class="language-selected">
-                                        <p>en-IN</p>
-                                    </div>
-                                    <div class="vr"></div>
-                                    <div class="dropdown-switch-lang"></div>
-                                </div>
-                                <div class="options">
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
             </div>
         </section>
@@ -231,6 +218,16 @@
         </section>
     </footer>
 
+    
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+        }
+    </script>
+
+    <script type="text/javascript"
+        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
     <!-- Scripts and libraries -->
     <script src="/static/src/libs/js/code.jquery.com_jquery-3.7.0.js"></script>
@@ -242,7 +239,7 @@
     <!-- <script src="https://unpkg.com/tippy.js@5/dist/tippy-bundle.iife.js"></script> -->
 
     <script>
-
+        // Utilities for the Frontend-Backend Processing...
 
         $('.outer-shell').click(function () {
             $('.inner-toggler').toggleClass('dark');
